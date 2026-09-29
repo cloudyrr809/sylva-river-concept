@@ -1057,7 +1057,25 @@ select.bk-select option{color:var(--pine)}
     });
   }
   var _place = placeSpots;
-  placeSpots = function(){ _place(); avoidText(); };
+  /* mobile: never let the terrace pill sit under the CTA (short screens / browser bars) —
+     lift the pill above the CTA and angle its line down to the pin */
+  function avoidCta(){
+    var sp = $('.mspot'), cta = $('.hero__mcta');
+    if (!sp || getComputedStyle(sp).display === 'none' || !cta) return;
+    var pill = $('.mspot__pill', sp), line = $('.spot__line', sp);
+    pill.style.transform = ''; line.classList.remove('is-angled'); line.style.width = ''; line.style.transform = ''; line.style.left = ''; line.style.right = '';
+    var over = pill.getBoundingClientRect().bottom - (cta.getBoundingClientRect().top - 16);
+    if (over <= 0) return;
+    pill.style.transform = 'translateY(' + (-over) + 'px)';
+    var pr = pill.getBoundingClientRect(), sr = sp.getBoundingClientRect();
+    var ax = pr.right - sr.left, ay = pr.top + pr.height / 2 - sr.top;       /* pill's right-middle, relative to the pin */
+    var len = Math.hypot(ax, ay) - 16, ang = Math.atan2(ay, ax);
+    line.classList.add('is-angled'); line.style.left = '0'; line.style.right = 'auto';
+    line.style.width = Math.max(0, len) + 'px';
+    line.style.transform = 'rotate(' + ang + 'rad) translateX(16px)';
+  }
+  placeSpots = function(){ _place(); avoidText(); avoidCta(); };
+  window.addEventListener('resize', function(){ placeSpots(); });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ placeSpots(); });
   if (heroImg.complete) placeSpots();
   heroImg.addEventListener('load', placeSpots);
