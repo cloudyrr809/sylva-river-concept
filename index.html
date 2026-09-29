@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Сылва Ривер — эко-парк на высоком берегу реки Сылва</title>
+<meta name="description" content="Три авторских дома, баня и шале для мероприятий на высоком берегу Сылвы, в 30 минутах от Перми.">
+<meta name="theme-color" content="#1E2A23">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500..600&family=Nunito+Sans:opsz,wght@6..12,400..700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="hero-chalet.jpg" media="(min-width: 761px)">
+<link rel="preload" as="image" href="river-terrace.jpg" media="(max-width: 760px)">
+<style>
+/* ============ Tokens ============ */
+:root{
+  --stone:#EFEBE3;         /* page */
+  --surface:#F7F5F0;       /* raised surfaces */
+  --pine:#1E2A23;          /* ink + dark sections */
+  --muted:#5C665F;         /* secondary text */
+  --slate:#52697A;         /* links, small icons, section tags */
+  --rust:#A4452C;          /* primary CTA, pins, prices, active */
+  --rust-hover:#8C3822;
+  --light:#EFEBE3;
+  --light-72:rgba(239,235,227,.76);
+  --hair:rgba(30,42,35,.12);
+  --hair-light:rgba(239,235,227,.16);
+  --glass:rgba(30,42,35,.45);
+  --glass-border:rgba(255,255,255,.14);
+
+  --r-photo:24px; --r-card:16px; --r-pill:999px;
+
+  /* Major third (1.25), base 17px */
+  --fs--1:.85rem;    /* 13.6 */
+  --fs-0:1.0625rem;  /* 17   */
+  --fs-1:1.328rem;   /* 21.25*/
+  --fs-2:1.66rem;    /* 26.6 */
+  --fs-3:2.075rem;   /* 33.2 */
+  --fs-4:2.594rem;   /* 41.5 */
+  --fs-5:3.242rem;   /* 51.9 */
+  --fs-9:7.916rem;   /* 126.6*/
+
+  --serif:"Literata", Georgia, "Times New Roman", serif;
+  --sans:"Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --gutter:24px;
+  --section:120px;
+  --focus:var(--rust);
+  --shadow:0 1px 2px rgba(30,42,35,.06), 0 16px 40px -20px rgba(30,42,35,.28);
+  --shadow-lift:0 2px 4px rgba(30,42,35,.06), 0 28px 56px -24px rgba(30,42,35,.36);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+
+/* ============ Base ============ */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:24px}
+body{
+  margin:0; overflow-x:clip;
+  font:400 var(--fs-0)/1.6 var(--sans); color:var(--pine);
+  background-color:var(--stone);
+  /* subtle paper grain */
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .12 0 0 0 0 .16 0 0 0 0 .14 0 0 0 .7 -.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  font-kerning:normal;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--slate)}
+h1,h2,h3,p,ul,dl,dd,figure{margin:0}
+ul{padding:0;list-style:none}
+button,input,select{font:inherit;color:inherit}
+.visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.icon{width:24px;height:24px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:6px}
+.on-dark{--focus:var(--light)}
+
+.container{width:min(100% - 2*var(--gutter), 1200px);margin-inline:auto}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter)}
+.section{padding-block:var(--section)}
+.section--surface{background:var(--surface)}
+.section--dark{background:var(--pine);color:var(--light)}
+
+.tag{display:inline-flex;align-items:center;gap:12px;font-size:var(--fs--1);font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--slate)}
+.tag::before{content:"";width:24px;height:2px;background:var(--rust);border-radius:2px}
+.section--dark .tag{color:var(--light-72)}
+.h2{font:600 var(--fs-4)/1.12 var(--serif);letter-spacing:-.015em;margin-top:16px;text-wrap:balance}
+.h3{font:600 var(--fs-1)/1.25 var(--serif);letter-spacing:-.005em}
+
+/* ============ Buttons ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;border-radius:var(--r-pill);
+  font:700 var(--fs-0)/1 var(--sans);text-decoration:none;border:1.5px solid transparent;cursor:pointer;
+  transition:background-color .2s, border-color .2s, color .2s, transform .2s var(--ease)}
+.btn .icon{width:20px;height:20px}
+.btn--primary{background:var(--rust);color:var(--surface)}
+.btn--primary:hover{background:var(--rust-hover)}
+.btn--primary:active{transform:translateY(1px)}
+.btn--secondary{background:transparent;color:var(--pine);border-color:rgba(30,42,35,.28)}
+.btn--secondary:hover{border-color:var(--pine);background:rgba(30,42,35,.04)}
+.btn--ghost-light{background:transparent;color:var(--light);border-color:rgba(239,235,227,.36)}
+.btn--ghost-light:hover{border-color:var(--light);background:rgba(239,235,227,.06)}
+.btn--block{width:100%}
+.link-arrow{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:700;text-decoration:none;color:inherit}
+.link-arrow .icon{width:20px;height:20px;transition:transform .2s var(--ease)}
+.link-arrow:hover .icon{transform:translateX(3px)}
+
+.glass{background:var(--glass);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid var(--glass-border)}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;isolation:isolate;overflow:hidden;
+  min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
+  background:var(--pine);color:var(--light);
+  --hx:max(24px, 50% - 600px);
+  --hr:max(24px, 50% - 600px);
+}
+/* photo fills the right ~70%: the whole chalet sits right of the text column; left edge melts into deep pine */
+.hero__media{position:absolute;top:0;right:0;bottom:0;left:30%;z-index:-2;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 96px);mask-image:linear-gradient(90deg,transparent 0,#000 96px)}
+.hero__img{width:100%;height:100%;object-fit:cover;object-position:55% 62%}
+.hero__shade{position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    linear-gradient(180deg, rgba(30,42,35,.62) 0%, rgba(30,42,35,0) 22%),
+    linear-gradient(90deg, rgba(30,42,35,.9) 0, rgba(30,42,35,.88) calc(var(--hx) + 360px), rgba(30,42,35,.5) calc(var(--hx) + 430px), rgba(30,42,35,0) calc(var(--hx) + 486px)),
+    linear-gradient(0deg, rgba(30,42,35,.45) 0%, rgba(30,42,35,0) 24%);
+}
+/* calm, uniform text area: soft blur that stops before the glass facade */
+.hero__veil{position:absolute;z-index:-1;left:0;top:0;bottom:0;width:calc(var(--hx) + 432px);pointer-events:none;
+  -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);background:rgba(30,42,35,.18);
+  -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 64px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 64px),transparent)}
+.hero__top{position:relative;z-index:4;display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding:max(32px, env(safe-area-inset-top)) var(--hr) 0 var(--hx)}
+.loc{display:flex;align-items:center;gap:8px;font-size:var(--fs--1);font-weight:600;letter-spacing:.04em;color:var(--light);white-space:nowrap}
+.loc .icon{width:20px;height:20px}
+.loc--m{display:none}
+.hero__right{display:flex;align-items:center;gap:12px}
+.nav{display:flex;align-items:center;padding:4px;border-radius:var(--r-pill)}
+.nav a{display:flex;align-items:center;min-height:44px;padding:0 18px;border-radius:var(--r-pill);color:var(--light);text-decoration:none;font-weight:600;transition:background-color .2s}
+.nav a:hover{background:rgba(239,235,227,.12)}
+.nav a+a{position:relative}
+.nav a+a::before{content:"";position:absolute;left:-2px;top:50%;width:3px;height:3px;border-radius:50%;background:rgba(239,235,227,.45);transform:translateY(-50%)}
+.phone-pill{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:var(--r-pill);background:var(--stone);color:var(--pine);font-weight:700;text-decoration:none;white-space:nowrap;transition:background-color .2s}
+.phone-pill:hover{background:var(--surface)}
+.phone-pill .icon{width:20px;height:20px}
+.round-btn{display:none;width:48px;height:48px;border-radius:50%;align-items:center;justify-content:center;color:var(--light);cursor:pointer;padding:0}
+
+.hero__content{position:relative;z-index:3;flex:1;display:flex;flex-direction:column;justify-content:center;
+  padding:48px var(--hr) 64px var(--hx)}
+.hero__col{width:min(100%, 424px)}
+.eyebrow{display:flex;align-items:center;gap:16px;font-size:var(--fs--1);font-weight:700;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap}
+.eyebrow--m{display:none}
+.eyebrow::before{content:"";width:40px;height:2px;border-radius:2px;background:var(--rust)}
+.wordmark{margin-top:20px;font:600 var(--fs-9)/.9 var(--serif);letter-spacing:-.04em;font-optical-sizing:auto;font-kerning:normal;font-feature-settings:"kern" 1}
+.wordmark span{display:block}
+.wordmark span+span{margin-left:.02em}
+.wordmark-latin{margin-top:16px;font-size:var(--fs--1);font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--light-72)}
+.hero__tagline{margin-top:32px;font-size:var(--fs-1);line-height:1.35;font-weight:600;text-wrap:balance}
+.hero__sub{margin-top:8px;color:var(--light-72)}
+
+/* Booking */
+.booking{margin-top:40px}
+.bk-fields{display:flex;padding:4px;border-radius:var(--r-pill)}
+.bk-field{position:relative;flex:1 1 auto;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:2px;min-height:64px;padding:8px 16px;border-radius:var(--r-pill);transition:background-color .2s}
+.bk-field:hover{background:rgba(239,235,227,.08)}
+.bk-field--fixed{flex:0 0 auto}
+.bk-field+.bk-field::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:1px;background:rgba(239,235,227,.2)}
+.bk-label{font-size:var(--fs--1);line-height:1.2;color:var(--light-72)}
+.bk-value{font-weight:700;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bk-input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;border:0;-webkit-appearance:none;appearance:none}
+.bk-field:has(.bk-input:focus-visible){outline:2px solid var(--light);outline-offset:-2px}
+select.bk-select{position:static;opacity:1;height:auto;background:transparent;border:0;padding:0 22px 0 0;margin:0;font-weight:700;line-height:1.3;color:var(--light);cursor:pointer;
+  -webkit-appearance:none;appearance:none;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23EFEBE3' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 10l5 5 5-5'/%3E%3C/svg%3E") right center/18px no-repeat}
+select.bk-select option{color:var(--pine)}
+.bk-select-wrap::after{content:"";position:absolute;inset:0;cursor:pointer;pointer-events:none}
+.bk-actions{display:flex;flex-wrap:wrap;align-items:center;gap:4px 24px;margin-top:12px}
+.bk-status{margin-top:12px;font-size:var(--fs--1);color:var(--light-72);min-height:0}
+.bk-status:empty{display:none}
+
+/* Hotspots (Hatcha-style: glass card → thin line → pin on the real object) */
+.spot{position:absolute;z-index:2;width:0;height:0;color:var(--light);text-decoration:none}
+.spot:focus-visible{outline:none}
+.spot:focus-visible .spot__card{outline:2px solid var(--light);outline-offset:3px}
+.spot__pin{position:absolute;left:-16px;top:-16px;width:32px;height:32px;border-radius:50%;background:rgba(30,42,35,.28);border:1px solid rgba(239,235,227,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.spot__pin::after{content:"";position:absolute;inset:9px;border-radius:50%;background:var(--rust);box-shadow:0 0 0 2px var(--light)}
+.spot__line{position:absolute;left:-.5px;width:1px;background:rgba(239,235,227,.75);top:calc(-1 * var(--line));height:calc(var(--line) - 16px)}
+.spot .glass,.hero-card.glass{background:rgba(30,42,35,.74)}
+.spot__card{position:absolute;left:var(--dx);bottom:var(--line);width:292px;display:flex;align-items:center;gap:16px;padding:8px 16px 8px 8px;border-radius:var(--r-card);box-shadow:0 20px 40px -24px rgba(0,0,0,.5);transition:transform .25s var(--ease), background-color .25s}
+.spot:hover .spot__card{transform:translateY(-3px);background:rgba(30,42,35,.78)}
+.spot__thumb{width:64px;height:64px;flex:none;border-radius:8px;object-fit:cover}
+.spot__text{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1}
+.spot__title{font:500 var(--fs-1)/1.15 var(--serif);letter-spacing:-.01em}
+.spot__sub{font-size:var(--fs--1);color:var(--light-72);font-weight:600}
+.spot__arrow{position:absolute;top:10px;right:10px;width:18px;height:18px;opacity:.8}
+.spot--chalet .spot__card{width:max-content;padding-right:40px}
+.spot--chalet .spot__title{white-space:nowrap}
+/* Plain glass card (object not in the photo → no pin) */
+.hero-card{position:absolute;z-index:3;right:calc(var(--hr) + 72px);bottom:20px;display:flex;align-items:center;gap:16px;width:max-content;padding:8px 40px 8px 8px;border-radius:var(--r-card);color:var(--light);text-decoration:none;background:rgba(30,42,35,.68);box-shadow:0 20px 40px -24px rgba(0,0,0,.5);transition:transform .25s var(--ease), background-color .25s}
+.hero-card:hover{transform:translateY(-3px);background:rgba(30,42,35,.78)}
+.hero-card:focus-visible{outline:2px solid var(--light);outline-offset:3px}
+.hero-card .spot__title{white-space:nowrap}
+.mspot{display:none}
+
+.scroll-down{position:absolute;z-index:3;right:var(--hr);bottom:32px;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--light);transition:background-color .2s, transform .2s var(--ease)}
+.scroll-down:hover{background:rgba(30,42,35,.6);transform:translateY(2px)}
+.hero__mcta{display:none}
+
+/* ============ HOUSES ============ */
+.section-lead{margin-top:12px;font-size:var(--fs-1);line-height:1.4;color:var(--muted)}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:56px}
+.houses__track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(5,auto);column-gap:var(--gutter)}
+.house{grid-row:span 5;display:grid;grid-template-rows:subgrid;row-gap:0;transition:transform .35s var(--ease)}
+.house__media{position:relative;margin-bottom:32px}
+.house__frame{border-radius:var(--r-photo);overflow:hidden;box-shadow:var(--shadow);transition:box-shadow .35s var(--ease);background:#d9d3c7}
+.house__photo{width:100%;aspect-ratio:4/5;object-fit:cover}
+.house__photo--tight{object-position:62% 52%;transform:scale(1.35);transform-origin:62% 52%}
+.house__inset{position:absolute;right:16px;bottom:-32px;width:44%;aspect-ratio:5/3;object-fit:cover;border-radius:var(--r-card);border:4px solid var(--stone);box-shadow:var(--shadow);background:#d9d3c7}
+.house__name{font:600 var(--fs-3)/1.1 var(--serif);letter-spacing:-.02em;padding-top:4px;align-self:end}
+.house__feature{margin-top:8px;color:var(--muted);text-wrap:pretty}
+.price{margin-top:24px;padding:16px 20px;border-radius:var(--r-card);background:var(--surface);box-shadow:0 1px 0 rgba(30,42,35,.04)}
+.price__cap{font-size:var(--fs--1);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+.price__grid{display:grid;grid-template-columns:1fr 1fr;column-gap:16px;margin-top:8px}
+.price__cell+.price__cell{padding-left:16px;border-left:1px solid var(--hair)}
+.price__cell dt{font-size:var(--fs--1);color:var(--muted);font-weight:600}
+.price__cell dd{font-size:var(--fs-1);font-weight:600;line-height:1.25;color:var(--pine);font-variant-numeric:tabular-nums;white-space:nowrap}
+.price__cell .price__x{display:inline-block;margin-top:4px}
+.price__cell dt.price__x{margin-right:8px}
+.price__cell dd.price__x{font-size:var(--fs-0)}
+.house__note{margin-top:12px;font-size:var(--fs--1);color:var(--muted)}
+.house__cta{margin-top:24px;align-self:start}
+.houses__shared{display:flex;align-items:center;gap:12px;margin-top:48px;padding-top:24px;border-top:1px solid var(--hair);color:var(--muted)}
+.houses__shared .icon{color:var(--slate);flex:none}
+#houses{padding-bottom:0}
+.houses__shared{padding-bottom:24px}
+@media (hover:hover){
+  .house:hover{transform:translateY(-4px)}
+  .house:hover .house__frame{box-shadow:var(--shadow-lift)}
+}
+
+/* ============ BANYA ============ */
+.banya{align-items:start}
+.banya__photo{grid-column:1 / span 7}
+.banya__photo img{width:100%;aspect-ratio:4/5;max-height:680px;object-fit:cover;object-position:50% 60%;border-radius:var(--r-photo);background:#d9d3c7}
+.banya__body{grid-column:9 / span 4}
+.banya__quote{margin-top:24px;max-width:65ch}
+.banya__price{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin-top:24px}
+.chip{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 20px;border-radius:var(--r-pill);background:var(--stone);font-weight:700}
+.chip b{color:var(--rust)}
+.note{font-size:var(--fs--1);color:var(--muted)}
+.banya__photo2{margin-top:32px}
+.banya__photo2 img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-photo);background:#d9d3c7}
+.banya__cta{margin-top:24px}
+
+/* ============ EVENTS ============ */
+.events__top{align-items:end}
+.events__terrace{grid-column:1 / span 5}
+.events__terrace img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--r-photo)}
+.events__intro{grid-column:7 / span 6}
+.events__lead{margin-top:24px;font-size:var(--fs-1);line-height:1.45;color:var(--light-72);max-width:36ch}
+.events__hall{margin-top:40px}
+.events__hall img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:50% 62%;border-radius:var(--r-photo)}
+.stats{margin-top:80px}
+.stat{grid-column:span 3;padding-top:24px;border-top:1px solid var(--hair-light)}
+.stat__num{display:flex;align-items:baseline;gap:8px;font:500 var(--fs-4)/1.05 var(--serif);letter-spacing:-.02em;font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
+.stat__num small{font:600 var(--fs-0)/1 var(--sans);letter-spacing:0;color:var(--light-72)}
+.stat__cap{margin-top:8px;color:var(--light-72)}
+.events__lists{margin-top:80px;row-gap:40px}
+.events__lists > div{grid-column:span 6}
+.events__lists > div:last-child{grid-column:7 / span 6}
+.list{margin-top:20px;display:grid;gap:14px}
+.list li{display:flex;gap:14px;align-items:flex-start;max-width:52ch}
+.list .icon{width:22px;height:22px;margin-top:2px;color:var(--light-72)}
+.list .is-nature .icon{color:var(--light)}
+.events__cta{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:80px;padding:32px 40px;border-radius:var(--r-card);background:rgba(239,235,227,.06);border:1px solid var(--hair-light)}
+.events__price{font:500 var(--fs-1)/1.35 var(--serif);max-width:32ch}
+
+/* ============ TERRITORY ============ */
+.amen{row-gap:32px}
+.amen li{grid-column:span 2;display:flex;flex-direction:column;align-items:flex-start;gap:16px;font-weight:700;line-height:1.35}
+.amen__icon{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--surface);color:var(--slate);box-shadow:0 1px 0 rgba(30,42,35,.05)}
+.amen__icon .icon{width:28px;height:28px}
+.territory{padding-block:80px}
+.territory .section-head{margin-bottom:48px}
+.amen{grid-template-columns:repeat(6,minmax(0,1fr))}
+.amen li{grid-column:auto;align-items:center;text-align:center}
+
+/* ============ FOOTER ============ */
+.footer{padding:var(--section) 0 40px}
+.footer__main{row-gap:48px}
+.footer__brand{grid-column:1 / span 4}
+.footer__col{grid-column:span 4}
+.footer__mark{font:600 var(--fs-3)/1.05 var(--serif);letter-spacing:-.03em}
+.footer__desc{margin-top:12px;color:var(--light-72);max-width:30ch}
+.footer__reviews{margin-top:32px}
+.footer__h{font-size:var(--fs--1);font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--light-72)}
+.footer address{margin-top:16px;font-style:normal;font-size:var(--fs-1);line-height:1.4}
+.footer__muted{margin-top:8px;color:var(--light-72)}
+.footer__phone{margin-top:16px}
+.footer__vk{margin-top:12px;color:var(--light)}
+.footer__meta{margin-top:72px;padding-top:32px;border-top:1px solid var(--hair-light);row-gap:16px}
+.footer__meta p{grid-column:span 4;display:flex;gap:12px;align-items:flex-start;color:var(--light-72)}
+.footer__meta .icon{color:var(--light)}
+.footer__bottom{display:flex;justify-content:space-between;gap:24px;margin-top:48px;font-size:var(--fs--1);color:var(--light-72)}
+.footer__bottom a{color:var(--light-72)}
+
+/* ============ Mobile menu + booking sheet ============ */
+.m-menu{position:fixed;z-index:60;left:16px;right:16px;top:calc(max(16px, env(safe-area-inset-top)) + 60px);padding:8px;border-radius:var(--r-card);background:var(--pine);color:var(--light);box-shadow:0 24px 48px -16px rgba(0,0,0,.45)}
+.m-menu[hidden]{display:none}
+.m-menu a{display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 16px;border-radius:12px;color:var(--light);text-decoration:none;font-weight:700}
+.m-menu a:hover{background:rgba(239,235,227,.08)}
+.sheet{border:0;padding:0;margin:auto auto 0;width:100%;max-width:560px;border-radius:var(--r-card) var(--r-card) 0 0;background:var(--pine);color:var(--light)}
+.sheet::backdrop{background:rgba(30,42,35,.6)}
+.sheet__inner{padding:20px 20px calc(24px + env(safe-area-inset-bottom))}
+.sheet__head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.sheet__title{font:600 var(--fs-2)/1.1 var(--serif)}
+.sheet__close{width:44px;height:44px;border-radius:50%;border:1px solid var(--hair-light);background:transparent;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.sheet .booking{margin-top:0}
+.sheet .bk-fields{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0;border:0;background:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+.sheet .bk-field{border-radius:var(--r-card);background:rgba(239,235,227,.07);border:1px solid var(--hair-light)}
+.sheet .bk-field+.bk-field::before{display:none}
+.sheet .bk-field:last-child{grid-column:1 / -1}
+.sheet .bk-actions{margin-top:16px}
+.sheet .bk-actions .btn{width:100%}
+.sheet .bk-actions .link-arrow{display:none}
+
+/* ============ Motion ============ */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .8s var(--ease), transform .8s var(--ease)}
+.js .reveal.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .js .reveal{opacity:1;transform:none}
+  .house:hover,.spot:hover .spot__card,.hero-card:hover{transform:none}
+}
+
+/* ============ Responsive ============ */
+@media (max-width:1180px){
+  .nav a{padding:0 14px}
+  .spot--desk{display:none}
+}
+@media (max-width:1024px){
+  .hero .nav{display:none}
+  .banya__photo{grid-column:1 / span 6}
+  .banya__body{grid-column:7 / span 6}
+}
+@media (max-width:760px){
+  :root{--gutter:20px;--section:72px}
+  .grid{grid-template-columns:repeat(4,minmax(0,1fr));column-gap:16px}
+  .h2{font-size:var(--fs-3)}
+
+  /* Mobile hero: portrait terrace with the flower arch; pale sky under a strong pine gradient, CTA on the stone floor */
+  .hero{--hx:20px;--hr:20px;min-height:100svh}
+  .hero__media{left:0;-webkit-mask-image:none;mask-image:none}
+  .hero__img{object-position:50% 55%}
+  .hero__shade{background:
+    linear-gradient(180deg, rgba(30,42,35,.94) 0%, rgba(30,42,35,.9) 22%, rgba(30,42,35,.8) 30%, rgba(30,42,35,.4) 38%, rgba(30,42,35,0) 45%),
+    linear-gradient(0deg, rgba(30,42,35,.72) 0%, rgba(30,42,35,.35) 18%, rgba(30,42,35,0) 32%)}
+  .eyebrow--d{display:none}
+  .eyebrow--m{display:flex}
+  .hero__top{padding-top:max(16px, env(safe-area-inset-top))}
+  .loc--d,.hero .nav,.phone-pill--d{display:none}
+  .loc--m{display:flex;gap:6px;letter-spacing:0;font-size:min(var(--fs--1), 3.4vw)}
+  .loc--m .icon{width:18px;height:18px}
+  .hero__right{gap:8px}
+  .round-btn{display:flex}
+  .hero__content{justify-content:flex-start;padding-top:32px;padding-bottom:calc(152px + env(safe-area-inset-bottom))}
+  .hero__col{width:100%}
+  .wordmark{margin-top:12px;font-size:min(var(--fs-5), 13.6vw);line-height:1;letter-spacing:-.035em}
+  .wordmark span{display:inline}
+  .wordmark-latin,.hero__sub,.hero .booking-slot,.scroll-down,.hero__veil{display:none}
+  .hero__tagline{margin-top:12px;font-size:var(--fs-0);line-height:1.45;max-width:30ch}
+  .spot--desk{display:none}
+  .mspot{display:block}
+  .mspot .spot__line{top:-.5px;height:1px;right:16px;left:auto;width:var(--line)}
+  .mspot__pill{position:absolute;top:-22px;right:calc(16px + var(--line));max-width:calc(var(--px, 300px) - 36px - var(--line));display:flex;align-items:center;min-height:44px;padding:4px 16px;border-radius:var(--r-pill);font-size:var(--fs--1);font-weight:700;line-height:1.25;white-space:nowrap}
+  .mspot:focus-visible .mspot__pill{outline:2px solid var(--light);outline-offset:3px}
+  .hero__mcta{display:flex;flex-direction:column;align-items:center;gap:4px;position:absolute;z-index:3;left:20px;right:20px;bottom:calc(16px + env(safe-area-inset-bottom))}
+  .hero__mcta .link-arrow{color:var(--light)}
+
+  .section-head{margin-bottom:32px;flex-direction:column;align-items:flex-start}
+  .houses__track{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:82%;column-gap:16px;
+    overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);
+    margin-inline:calc(-1 * var(--gutter));padding:0 var(--gutter) 8px;scrollbar-width:none}
+  .houses__track::-webkit-scrollbar{display:none}
+  .house{scroll-snap-align:start}
+  .house__name{font-size:var(--fs-2)}
+  .price{padding:14px 16px}
+  .price__cell+.price__cell{padding-left:12px}
+  .price__grid{column-gap:12px}
+  .house__cta{width:100%}
+  .houses__shared{align-items:flex-start;margin-top:32px}
+
+  .banya__photo,.banya__body{grid-column:1 / -1}
+  .banya__body{margin-top:32px}
+  .banya__cta{width:100%}
+
+  .events__terrace,.events__intro{grid-column:1 / -1}
+  .events__intro{margin-top:32px}
+  .events__top{display:flex;flex-direction:column}
+  .events__terrace{order:0}
+  .events__intro{order:1}
+  .events__terrace img{aspect-ratio:4/5}
+  .events__hall{margin-top:24px}
+  .events__lead{font-size:var(--fs-0)}
+  .stats{margin-top:48px;row-gap:32px}
+  .stat{grid-column:span 2}
+  .stat__num{font-size:var(--fs-2)}
+  .events__lists{margin-top:48px}
+  .events__lists > div,.events__lists > div:last-child{grid-column:1 / -1}
+  .events__cta{flex-direction:column;align-items:stretch;margin-top:48px;padding:24px}
+  .events__cta .btn{width:100%}
+
+  .territory{padding-block:var(--section)}
+  .amen{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .amen li{grid-column:span 2;flex-direction:row;align-items:center;gap:14px;text-align:left}
+  .amen__icon{width:52px;height:52px}
+  .amen{row-gap:16px}
+
+  .footer{padding-top:72px}
+  .footer__brand,.footer__col,.footer__meta p{grid-column:1 / -1}
+  .footer__phone{width:100%}
+  .footer__meta{margin-top:48px}
+  .footer__bottom{flex-direction:column;gap:8px}
+}
+@media (min-width:761px){ .sheet{display:none} .m-menu{display:none} }
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113180107', 'ym');
+
+    ym(113180107, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/113180107" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+
+<!-- Icon sprite: one family, 24px grid, 1.5px stroke -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.2 4h2.9l1.5 3.8-1.9 1.3a10.6 10.6 0 0 0 6.2 6.2l1.3-1.9 3.8 1.5v2.9A1.7 1.7 0 0 1 18.2 19.5 15 15 0 0 1 4.5 5.8 1.7 1.7 0 0 1 6.2 4z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M5 9.5h14M5 14.5h14"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M5 12h14M13.5 6.5 19 12l-5.5 5.5"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6.5 13.5 12 19l5.5-5.5"/></symbol>
+  <symbol id="i-upright" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11.2 12 4.5l8 6.7"/><path d="M6.5 9.5V19.5h11V9.5"/><path d="M10 19.5v-5h4v5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19l7.5-7.5"/></symbol>
+  <symbol id="i-pier" viewBox="0 0 24 24"><path d="M3 9.5h18"/><path d="M6.5 9.5v6M12 9.5v6M17.5 9.5v6"/><path d="M6.5 9.5V6M17.5 9.5V6"/><path d="M3 19c1.5-1.1 3-1.1 4.5 0s3 1.1 4.5 0 3-1.1 4.5 0 3 1.1 4.5 0"/></symbol>
+  <symbol id="i-sup" viewBox="0 0 24 24"><path d="M9 2.8c2 0 3.2 4 3.2 9.2S11 21.2 9 21.2 5.8 17.2 5.8 12 7 2.8 9 2.8z"/><path d="M9 16.5v2"/><path d="M17.5 3v11.5"/><path d="M16 3h3"/><path d="M17.5 14.5c-1.3 0-2 1-2 2.6 0 2 .9 3.9 2 3.9s2-1.9 2-3.9c0-1.6-.7-2.6-2-2.6z"/></symbol>
+  <symbol id="i-boat" viewBox="0 0 24 24"><path d="M3.5 13.5h17l-2.3 4H5.8z"/><path d="M7 13.5V10h6l2.5 3.5"/><path d="M9.5 10V6.5"/><path d="M3 21c1.5-1 3-1 4.5 0s3 1 4.5 0 3-1 4.5 0 3 1 4.5 0"/></symbol>
+  <symbol id="i-fish" viewBox="0 0 24 24"><path d="M6.5 12c2.6-3.4 6-4.8 9.3-4.3C18.2 8 20 10 21 12c-1 2-2.8 4-5.2 4.3-3.3.5-6.7-.9-9.3-4.3z"/><path d="M6.5 12 3 8.8v6.4z"/><path d="M16.8 11h.01"/></symbol>
+  <symbol id="i-banya" viewBox="0 0 24 24"><path d="M4.5 11.5h15l-1.6 8H6.1z"/><path d="M3 11.5h18"/><path d="M9 8.5c-.9-1.1.9-2 0-3.5M12.5 8.5c-.9-1.1.9-2 0-3.5M16 8.5c-.9-1.1.9-2 0-3.5"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><path d="M4.5 11.5h15v8h-15z"/><path d="M3.5 8h17v3.5h-17z"/><path d="M12 8v11.5"/><path d="M12 8c-1.3-3.2-5-3.6-5-1.6C7 7.8 9.4 8 12 8zM12 8c1.3-3.2 5-3.6 5-1.6C17 7.8 14.6 8 12 8z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12.5" rx="2"/><path d="M3 10h18M7 15h3.5"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M20.5 4 3.5 10.8l6.6 2.4 2.4 6.6z"/><path d="m10.1 13.2 4.4-4.4"/></symbol>
+  <symbol id="i-kitchen" viewBox="0 0 24 24"><path d="M6 4v6a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V4M8 4v16"/><path d="M16.5 20V4c-2 1-3 3.5-3 6.5h3"/></symbol>
+</svg>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <picture class="hero__media">
+    <source media="(max-width: 760px)" srcset="river-terrace.jpg" width="1330" height="2000">
+    <img class="hero__img" src="hero-chalet.jpg" width="2500" height="1666" fetchpriority="high" decoding="async"
+         alt="Площадка «Сылва Ривер» на берегу Сылвы: шале с панорамным остеклением среди сосен и каменная терраса над рекой">
+  </picture>
+  <div class="hero__shade" aria-hidden="true"></div>
+  <div class="hero__veil" aria-hidden="true"></div>
+
+  <div class="hero__top">
+    <p class="loc loc--d"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Хутор Русское Поле · 30&nbsp;минут от&nbsp;Перми</p>
+    <p class="loc loc--m"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Русское Поле · 30&nbsp;мин от&nbsp;Перми</p>
+    <div class="hero__right">
+      <nav class="nav glass" aria-label="Разделы">
+        <a href="#events">Мероприятия</a><a href="#houses">Дома</a><a href="#banya">Баня</a><a href="#contacts">Как добраться</a>
+      </nav>
+      <a class="phone-pill phone-pill--d" href="tel:+79026418002"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>+7&nbsp;(902)&nbsp;641&#8209;80&#8209;02</a>
+      <a class="round-btn glass" href="tel:+79026418002" aria-label="Позвонить: +7 (902) 641-80-02"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></a>
+      <button class="round-btn glass" type="button" aria-label="Меню" aria-expanded="false" aria-controls="m-menu" data-menu-toggle><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+
+  <div class="hero__content">
+    <div class="hero__col">
+      <p class="eyebrow eyebrow--d">Площадка для событий на берегу Сылвы</p>
+      <p class="eyebrow eyebrow--m">Площадка на берегу Сылвы</p>
+      <h1 class="wordmark" aria-label="Сылва Ривер"><span>Сылва</span> <span>Ривер</span></h1>
+      <p class="wordmark-latin" lang="en">Sylva River</p>
+      <p class="hero__tagline">Свадьбы и&nbsp;праздники в&nbsp;шале на высоком берегу реки</p>
+      <p class="hero__sub">Терраса 450&nbsp;м² над рекой, до&nbsp;70&nbsp;гостей и&nbsp;три авторских дома для ночёвки&nbsp;— в&nbsp;30&nbsp;минутах от&nbsp;Перми</p>
+
+      <div class="booking-slot" id="booking-slot">
+        <form class="booking" id="booking" novalidate>
+          <div class="bk-fields glass">
+            <div class="bk-field">
+              <label class="bk-label" for="bk-date">Дата события</label>
+              <span class="bk-value" id="bk-date-val" data-empty="выбрать">выбрать</span>
+              <input class="bk-input" id="bk-date" name="date" type="date" aria-describedby="bk-date-val">
+            </div>
+            <div class="bk-field bk-field--fixed">
+              <label class="bk-label" for="bk-guests">Гостей</label>
+              <select class="bk-select" id="bk-guests" name="guests">
+                <option value="">до&nbsp;70</option>
+                <option>до&nbsp;20</option>
+                <option>20–40</option>
+                <option>40–60</option>
+                <option>60–70</option>
+              </select>
+            </div>
+            <div class="bk-field bk-field--fixed">
+              <label class="bk-label" for="bk-format">Формат</label>
+              <select class="bk-select" id="bk-format" name="format">
+                <option>свадьба</option>
+                <option>день рождения</option>
+                <option>корпоратив</option>
+                <option>другое</option>
+              </select>
+            </div>
+          </div>
+          <div class="bk-actions">
+            <button class="btn btn--primary" type="submit">Узнать свободные даты<svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></button>
+            <a class="link-arrow" href="#houses">Дома для отдыха<svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></a>
+          </div>
+          <p class="bk-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Desktop: one pin on the chalet's glass gable (photo coordinates, JS maps them onto the crop) -->
+  <a class="spot spot--desk spot--chalet" href="#events" data-spot data-img="hero-chalet" data-fx="0.34" data-fy="0.57" style="left:49%;top:57%;--dx:-24px;--line:110px">
+    <span class="spot__card glass">
+      <img class="spot__thumb" src="chalet-hall.jpg" alt="" width="64" height="64" decoding="async">
+      <span class="spot__text"><span class="spot__title">Шале для свадеб</span><span class="spot__sub">до&nbsp;60 в&nbsp;посадке · до&nbsp;70 фуршет</span></span>
+      <svg class="icon spot__arrow" aria-hidden="true"><use href="#i-upright"/></svg>
+    </span>
+    <span class="spot__line" aria-hidden="true"></span>
+    <span class="spot__pin" aria-hidden="true"></span>
+  </a>
+  <!-- Terrace is not in this photo → plain card, no pin -->
+  <a class="hero-card glass spot--desk" href="#events">
+    <img class="spot__thumb" src="river-terrace.jpg" alt="" width="64" height="64" decoding="async">
+    <span class="spot__text"><span class="spot__title">Терраса над рекой</span><span class="spot__sub">450&nbsp;м² · вид на&nbsp;разлив реки</span></span>
+    <svg class="icon spot__arrow" aria-hidden="true"><use href="#i-upright"/></svg>
+  </a>
+
+  <!-- Mobile: pin on the terrace floor in front of the arch -->
+  <a class="spot mspot" href="#events" data-spot data-img="river-terrace" data-fx="0.66" data-fy="0.8" style="left:74%;top:80%;--line:14px">
+    <span class="spot__pin" aria-hidden="true"></span>
+    <span class="spot__line" aria-hidden="true"></span>
+    <span class="mspot__pill glass">Терраса 450&nbsp;м² · до&nbsp;70&nbsp;гостей</span>
+  </a>
+
+  <div class="hero__mcta">
+    <button class="btn btn--primary btn--block" type="button" data-open-booking>Узнать свободные даты<svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></button>
+    <a class="link-arrow" href="#houses">Дома для отдыха<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a>
+  </div>
+
+  <a class="scroll-down glass" href="#events" aria-label="Прокрутить к мероприятиям"><svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a>
+</header>
+
+<nav class="m-menu on-dark" id="m-menu" aria-label="Меню" hidden>
+  <a href="#events">Мероприятия<svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></a>
+  <a href="#houses">Дома<svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></a>
+  <a href="#banya">Баня<svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></a>
+  <a href="#contacts">Как добраться<svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></a>
+  <a href="tel:+79026418002">+7&nbsp;(902)&nbsp;641&#8209;80&#8209;02<svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></a>
+</nav>
+
+<dialog class="sheet on-dark" id="bk-sheet" aria-labelledby="bk-sheet-title">
+  <div class="sheet__inner">
+    <div class="sheet__head">
+      <h2 class="sheet__title" id="bk-sheet-title">Узнать свободные даты</h2>
+      <button class="sheet__close" type="button" aria-label="Закрыть" data-sheet-close><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+    <div id="sheet-slot"></div>
+  </div>
+</dialog>
+
+<main>
+<!-- ================= EVENTS ================= -->
+<section class="section section--dark on-dark" id="events" aria-labelledby="events-title">
+  <div class="container">
+    <div class="grid events__top">
+      <figure class="events__terrace reveal">
+        <img src="river-terrace.jpg" width="1330" height="2000" loading="lazy" decoding="async"
+             alt="Каменная терраса над широкой рекой с цветочной аркой и плетёными стульями">
+      </figure>
+      <div class="events__intro reveal">
+        <p class="tag">Мероприятия</p>
+        <h2 class="h2" id="events-title">Шале для свадеб и&nbsp;праздников</h2>
+        <p class="events__lead">Двухэтажное шале с&nbsp;огромным панорамным остеклением на&nbsp;высоком берегу Сылвы.</p>
+        <figure class="events__hall">
+          <img src="chalet-hall.jpg" width="1334" height="2000" loading="lazy" decoding="async"
+               alt="Банкетный зал шале: каменный камин, панорамные окна и сервированные столы">
+        </figure>
+      </div>
+    </div>
+
+    <ul class="grid stats reveal" aria-label="Шале в цифрах">
+      <li class="stat"><p class="stat__num"><small>до</small>60</p><p class="stat__cap">гостей в&nbsp;посадке</p></li>
+      <li class="stat"><p class="stat__num"><small>до</small>70</p><p class="stat__cap">на&nbsp;фуршете</p></li>
+      <li class="stat"><p class="stat__num">450<small>м²</small></p><p class="stat__cap">терраса над рекой</p></li>
+      <li class="stat"><p class="stat__num">100</p><p class="stat__cap">мест в&nbsp;гардеробе</p></li>
+    </ul>
+
+    <div class="grid events__lists reveal">
+      <div>
+        <h3 class="h3">Внутри и&nbsp;вокруг</h3>
+        <ul class="list">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Камин и&nbsp;русская печь</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Зона кухни, 2&nbsp;санузла</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Открытая терраса 450&nbsp;м² из&nbsp;натурального камня с&nbsp;видом на&nbsp;разлив реки</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Выход к&nbsp;воде с&nbsp;пирсом</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="h3">Условия</h3>
+        <ul class="list">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Алкоголь, напитки и&nbsp;торт&nbsp;— ваши, без&nbsp;пробкового сбора</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Кейтеринг-партнёры: Чадов кейтеринг, Буров кейтеринг, Гуд&nbsp;фуд кейтеринг; другие&nbsp;— индивидуально</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Задаток 50%, остаток&nbsp;— за&nbsp;30&nbsp;дней до&nbsp;мероприятия; залог 20&nbsp;000&nbsp;₽ возвращается</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Аренда 10:00–23:00, технический час до&nbsp;00:00</li>
+          <li class="is-nature"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg>Бережём природу: вместо салюта&nbsp;— холодные фонтаны от&nbsp;партнёра «Салют Пермь»</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="events__cta reveal">
+      <p class="events__price">Стоимость зависит от&nbsp;даты&nbsp;— рассчитаем для вашего события</p>
+      <a class="btn btn--primary" href="tel:+79026418002">Узнать свободные даты</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOUSES ================= -->
+<section class="section" id="houses" aria-labelledby="houses-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <p class="tag">Дома</p>
+        <h2 class="h2" id="houses-title">Три авторских дома</h2>
+        <p class="section-lead">Для отдыха на&nbsp;выходных и&nbsp;для гостей вашего праздника</p>
+      </div>
+    </div>
+
+    <div class="houses__track">
+      <!-- Сохатка -->
+      <article class="house reveal" id="house-sokhatka" aria-labelledby="h-sokhatka">
+        <figure class="house__media">
+          <div class="house__frame"><img class="house__photo" src="sokhatka.jpg" width="1707" height="2560" loading="lazy" decoding="async"
+               alt="Каменный дом «Сохатка» с красной крышей, рогами лося на фасаде и плетёными креслами у входа"></div>
+          <img class="house__inset" src="sokhatka-inside.jpg" width="2000" height="1500" loading="lazy" decoding="async"
+               alt="Кухня-гостиная «Сохатки» — вид с галереи второго света">
+        </figure>
+        <h3 class="house__name" id="h-sokhatka">Сохатка</h3>
+        <p class="house__feature">Камин и второй свет · мангальная зона у&nbsp;дома</p>
+        <div class="price">
+          <p class="price__cap">Цена за сутки</p>
+          <dl class="price__grid">
+            <div class="price__cell"><dt>пн–чт</dt><dd>14&nbsp;000&nbsp;₽</dd></div>
+            <div class="price__cell"><dt>пт–вс</dt><dd>16&nbsp;000&nbsp;₽</dd></div>
+          </dl>
+        </div>
+        <a class="btn btn--secondary house__cta" href="tel:+79026418002">Выбрать даты</a>
+      </article>
+
+      <!-- Судак -->
+      <article class="house reveal" id="house-sudak" aria-labelledby="h-sudak">
+        <figure class="house__media">
+          <div class="house__frame"><img class="house__photo" src="sudak.jpg" width="1334" height="2000" loading="lazy" decoding="async"
+               alt="Дом «Судак» из камня и дерева с гамаком среди сосен"></div>
+          <img class="house__inset" src="sudak-inside.jpg" width="1170" height="688" loading="lazy" decoding="async"
+               alt="Гостиная «Судака»: камин и обеденная зона у панорамных окон">
+        </figure>
+        <h3 class="house__name" id="h-sudak">Судак</h3>
+        <p class="house__feature">Камин и панорамное остекление</p>
+        <div class="price">
+          <p class="price__cap">Цена за сутки</p>
+          <dl class="price__grid">
+            <div class="price__cell"><dt>пн–чт</dt><dd>14&nbsp;000&nbsp;₽</dd></div>
+            <div class="price__cell"><dt>пт–вс</dt><dd>17&nbsp;000&nbsp;₽</dd></div>
+          </dl>
+        </div>
+        <a class="btn btn--secondary house__cta" href="tel:+79026418002">Выбрать даты</a>
+      </article>
+
+      <!-- Кипрей -->
+      <article class="house reveal" id="house-kiprey" aria-labelledby="h-kiprey">
+        <figure class="house__media">
+          <div class="house__frame"><img class="house__photo house__photo--tight" src="kiprey.jpg" width="1500" height="2000" loading="lazy" decoding="async"
+               alt="Дом «Кипрей» среди сосен на берегу Сылвы, к нему ведёт каменная дорожка"></div>
+          <img class="house__inset" src="kiprey-inside.jpg" width="1500" height="2000" loading="lazy" decoding="async"
+               alt="Гостиная «Кипрея» с окнами на реку на закате">
+        </figure>
+        <h3 class="house__name" id="h-kiprey">Кипрей</h3>
+        <p class="house__feature">Вид на реку из гостиной · 2&nbsp;санузла</p>
+        <div class="price">
+          <p class="price__cap">Цена за сутки</p>
+          <dl class="price__grid">
+            <div class="price__cell"><dt>пн–чт</dt><dd>17&nbsp;000&nbsp;₽</dd></div>
+            <div class="price__cell">
+              <dt>пт–сб</dt><dd>19&nbsp;000&nbsp;₽</dd>
+              <dt class="price__x">вс</dt><dd class="price__x">18&nbsp;000&nbsp;₽</dd>
+            </div>
+          </dl>
+        </div>
+        <a class="btn btn--secondary house__cta" href="tel:+79026418002">Выбрать даты</a>
+      </article>
+    </div>
+
+    <p class="houses__shared reveal"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg>
+      <span>Цены за&nbsp;сутки на&nbsp;4&nbsp;гостей · до&nbsp;6&nbsp;гостей, доп. гость +1&nbsp;500&nbsp;₽ · кухня с&nbsp;посудой в&nbsp;каждом доме · заезд с&nbsp;15:00, выезд до&nbsp;12:00</span></p>
+  </div>
+</section>
+
+<!-- ================= BANYA ================= -->
+<section class="section section--surface" id="banya" aria-labelledby="banya-title">
+  <div class="container grid banya">
+    <figure class="banya__photo reveal">
+      <img src="banya.jpg" width="1500" height="2000" loading="lazy" decoding="async"
+           alt="Комната отдыха в бане: тёплый свет соляной лампы, банные шапки и столик с лимонадом">
+    </figure>
+    <div class="banya__body reveal">
+      <p class="tag">Баня</p>
+      <h2 class="h2" id="banya-title">Банный ретрит на&nbsp;берегу реки</h2>
+      <p class="banya__quote">Светлый и&nbsp;уютный уголок, где за&nbsp;пару часов можно очистить тело и&nbsp;ум и&nbsp;восполнить энергию.</p>
+      <div class="banya__price">
+        <span class="chip"><b>2&nbsp;250&nbsp;₽/час</b> · от&nbsp;2&nbsp;часов</span>
+        <span class="note">Веники&nbsp;— отдельно</span>
+      </div>
+      <a class="btn btn--primary banya__cta" href="tel:+79026418002">Забронировать баню</a>
+      <figure class="banya__photo2">
+        <img src="banya-river.jpg" width="1080" height="810" loading="lazy" decoding="async"
+             alt="Стеклянная дверь бани открывается на каменный двор и реку">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TERRITORY ================= -->
+<section class="section territory" id="territory" aria-labelledby="territory-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <p class="tag">Территория</p>
+        <h2 class="h2" id="territory-title">На территории</h2>
+      </div>
+    </div>
+    <ul class="grid amen reveal">
+      <li><span class="amen__icon"><svg class="icon" aria-hidden="true"><use href="#i-pier"/></svg></span>Пирс</li>
+      <li><span class="amen__icon"><svg class="icon" aria-hidden="true"><use href="#i-sup"/></svg></span>Сапы</li>
+      <li><span class="amen__icon"><svg class="icon" aria-hidden="true"><use href="#i-boat"/></svg></span>Прогулки на&nbsp;катере</li>
+      <li><span class="amen__icon"><svg class="icon" aria-hidden="true"><use href="#i-fish"/></svg></span>Рыбалка</li>
+      <li><span class="amen__icon"><svg class="icon" aria-hidden="true"><use href="#i-banya"/></svg></span>Баня</li>
+      <li><span class="amen__icon"><svg class="icon" aria-hidden="true"><use href="#i-gift"/></svg></span>Подарочные сертификаты</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer section--dark on-dark" id="contacts">
+  <div class="container grid footer__main">
+    <div class="footer__brand">
+      <p class="footer__mark">Сылва Ривер</p>
+      <p class="footer__desc">Эко-парк на&nbsp;высоком берегу реки&nbsp;Сылва</p>
+      <a class="btn btn--ghost-light footer__reviews" href="https://t.me/sylvariverpark_review" target="_blank" rel="noopener">Отзывы гостей в&nbsp;Telegram<svg class="icon" aria-hidden="true"><use href="#i-upright"/></svg></a>
+    </div>
+    <div class="footer__col">
+      <h2 class="footer__h">Как добраться</h2>
+      <address>Пермский край, хутор Русское Поле, ул.&nbsp;Центральная,&nbsp;53А</address>
+      <p class="footer__muted">В&nbsp;30&nbsp;минутах от&nbsp;Перми</p>
+    </div>
+    <div class="footer__col">
+      <h2 class="footer__h">Связаться</h2>
+      <a class="btn btn--primary footer__phone" href="tel:+79026418002"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>+7&nbsp;(902)&nbsp;641&#8209;80&#8209;02</a>
+      <p><a class="link-arrow footer__vk" href="https://vk.com/sylvariver" target="_blank" rel="noopener">ВКонтакте · vk.com/sylvariver<svg class="icon" aria-hidden="true"><use href="#i-upright"/></svg></a></p>
+    </div>
+  </div>
+  <div class="container grid footer__meta">
+    <p><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span>Заезд с&nbsp;15:00, выезд до&nbsp;12:00</span></p>
+    <p><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg><span>Оплата наличными, по&nbsp;СБП или картой</span></p>
+    <p><svg class="icon" aria-hidden="true"><use href="#i-gift"/></svg><span>Есть подарочные сертификаты</span></p>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 Сылва Ривер</p>
+    <a href="#top">Наверх ↑</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var doc = document.documentElement;
+  doc.classList.add('js');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var mobileMQ = window.matchMedia('(max-width: 760px)');
+
+  /* ---- Fade-up on scroll ---- */
+  var items = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function(el){ el.classList.add('is-in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    items.forEach(function(el){ io.observe(el); });
+  }
+
+  /* ---- Hotspots: map photo coordinates onto the object-fit:cover crop ---- */
+  var hero = document.querySelector('.hero');
+  var img = document.querySelector('.hero__img');
+  function placeSpots(){
+    if (!img.naturalWidth) return;
+    var src = img.currentSrc || img.src;
+    var hr = hero.getBoundingClientRect(), r = img.getBoundingClientRect();
+    var iw = img.naturalWidth, ih = img.naturalHeight;
+    var pos = getComputedStyle(img).objectPosition.split(' ');
+    var px = parseFloat(pos[0]) / 100, py = parseFloat(pos[1] || '50%') / 100;
+    var s = Math.max(r.width / iw, r.height / ih);
+    var ox = (r.left - hr.left) + (r.width - iw * s) * px;
+    var oy = (r.top - hr.top) + (r.height - ih * s) * py;
+    document.querySelectorAll('[data-spot]').forEach(function(el){
+      if (src.indexOf(el.dataset.img) === -1) return;
+      el.style.left = (ox + parseFloat(el.dataset.fx) * iw * s).toFixed(1) + 'px';
+      el.style.top  = (oy + parseFloat(el.dataset.fy) * ih * s).toFixed(1) + 'px';
+      el.style.setProperty('--px', el.style.left);
+    });
+  }
+  if (img.complete) placeSpots(); else img.addEventListener('load', placeSpots);
+  img.addEventListener('load', placeSpots);
+  if ('ResizeObserver' in window) new ResizeObserver(placeSpots).observe(hero);
+  else window.addEventListener('resize', placeSpots);
+
+  /* ---- Event inquiry ---- */
+  var form = document.getElementById('booking');
+  var dateEl = document.getElementById('bk-date');
+  var guestsEl = document.getElementById('bk-guests'), formatEl = document.getElementById('bk-format');
+  var status = form.querySelector('.bk-status');
+  var fmt = new Intl.DateTimeFormat('ru-RU', {day:'numeric', month:'long', year:'numeric'});
+  var today = new Date(); today.setHours(12);
+  dateEl.min = today.toISOString().slice(0,10);
+  function syncValue(input){
+    var out = document.getElementById(input.id + '-val');
+    out.textContent = input.value ? fmt.format(new Date(input.value + 'T12:00')) : out.dataset.empty;
+  }
+  function openPicker(input){ input.focus(); try { input.showPicker(); } catch(e) {} }
+  dateEl.addEventListener('click', function(){ try { dateEl.showPicker(); } catch(e) {} });
+  dateEl.addEventListener('change', function(){ syncValue(dateEl); status.textContent = ''; });
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (!dateEl.value) { openPicker(dateEl); return; }
+    var g = guestsEl.options[guestsEl.selectedIndex].text.replace(/\u00a0/g,' ');
+    status.textContent = formatEl.value.charAt(0).toUpperCase() + formatEl.value.slice(1) + ', ' +
+      fmt.format(new Date(dateEl.value + 'T12:00')) + ', гостей: ' + g + '. Свободна ли дата — +7 (902) 641-80-02';
+  });
+
+  /* Mobile: booking opens as a bottom sheet (same form, moved in) */
+  var sheet = document.getElementById('bk-sheet');
+  var slotHero = document.getElementById('booking-slot'), slotSheet = document.getElementById('sheet-slot');
+  function openBooking(){
+    if (mobileMQ.matches && sheet.showModal){
+      slotSheet.appendChild(form);
+      sheet.showModal();
+    } else {
+      window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'});
+      setTimeout(function(){ dateEl.focus({preventScroll:true}); }, reduce ? 0 : 450);
+    }
+  }
+  sheet.addEventListener('close', function(){ slotHero.appendChild(form); });
+  document.querySelector('[data-sheet-close]').addEventListener('click', function(){ sheet.close(); });
+  sheet.addEventListener('click', function(e){ if (e.target === sheet) sheet.close(); });
+  document.querySelectorAll('[data-open-booking]').forEach(function(b){ b.addEventListener('click', function(){ openBooking(); }); });
+
+  /* Mobile menu */
+  var menu = document.getElementById('m-menu'), toggle = document.querySelector('[data-menu-toggle]');
+  function setMenu(open){ menu.hidden = !open; toggle.setAttribute('aria-expanded', String(open)); }
+  toggle.addEventListener('click', function(){ setMenu(menu.hidden); });
+  menu.addEventListener('click', function(e){ if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !menu.hidden){ setMenu(false); toggle.focus(); } });
+})();
+</script>
+</body>
+</html>
