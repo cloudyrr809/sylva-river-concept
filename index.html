@@ -1075,6 +1075,17 @@ select.bk-select option{color:var(--pine)}
     line.style.transform = 'rotate(' + ang + 'rad) translateX(16px)';
   }
   placeSpots = function(){ _place(); avoidText(); avoidCta(); };
+  /* mobile: lock the hero height once, so the CTA and the terrace pill don't jump while the browser bars hide/show on scroll */
+  var lockedW = 0;
+  function lockHero(){
+    if (!mobileMQ.matches){ hero.style.height = ''; hero.style.minHeight = ''; lockedW = 0; return; }
+    if (window.innerWidth === lockedW) return;          /* ignore height-only resizes (toolbar show/hide) */
+    lockedW = window.innerWidth;
+    hero.style.minHeight = '0'; hero.style.height = window.innerHeight + 'px';
+  }
+  lockHero();
+  window.addEventListener('resize', lockHero);
+  window.addEventListener('orientationchange', function(){ lockedW = 0; setTimeout(function(){ lockHero(); placeSpots(); }, 300); });
   window.addEventListener('resize', function(){ placeSpots(); });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ placeSpots(); });
   if (heroImg.complete) placeSpots();
