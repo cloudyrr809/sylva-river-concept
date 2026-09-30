@@ -109,8 +109,8 @@ button{cursor:pointer}
    Variant B (.v-b): centred Playfair headline over the water; its baseline rests on the pier railing (JS maps photo coords). */
 .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;background:var(--bg)}
 /* the top bar sits on its own stone strip (mirrors the band below), so the links need no pill backgrounds */
-.hero__stage{position:relative;isolation:isolate;overflow:hidden;flex:1;display:flex;flex-direction:column;background:var(--bg)}
-.hero__media{position:absolute;inset:92px 0 0;z-index:-1;overflow:hidden}
+.hero__stage{position:relative;overflow:hidden;flex:1;display:flex;flex-direction:column;background:var(--bg)}
+.hero__media{position:absolute;inset:92px 0 0;z-index:0;overflow:hidden}
 .hero__img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
 .topbar{position:relative;z-index:4;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;column-gap:24px;height:92px;padding-top:env(safe-area-inset-top)}
 .nav{display:flex;gap:30px;justify-self:start}
@@ -340,7 +340,7 @@ button{cursor:pointer}
 /* desktop/tablet: the top bar stays with the visitor */
 @media (min-width:761px){
   html{scroll-padding-top:108px}
-  .topbar{position:fixed;z-index:50;top:0;left:0;right:0;width:auto;margin:0;padding-inline:max(var(--pad), calc((100% - 1360px) / 2));
+  .topbar{position:fixed;z-index:1000;top:0;left:0;right:0;width:auto;margin:0;padding-inline:max(var(--pad), calc((100% - 1360px) / 2));
     background:var(--bg);transition:box-shadow .35s var(--ease)}
   .topbar.is-scrolled{box-shadow:0 1px 0 var(--hair), 0 10px 30px -18px rgba(43,58,48,.35)}
   .m-menu{top:100px}
