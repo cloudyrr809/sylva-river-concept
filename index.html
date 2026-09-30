@@ -1,0 +1,1083 @@
+<!doctype html>
+<html lang="ru" class="v-b">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Сылва Ривер — свадьбы на высоком берегу Сылвы</title>
+<meta name="description" content="Свадьбы и праздники в шале на высоком берегу Сылвы: терраса 450 м² над рекой, до 70 гостей, три авторских дома и баня для гостей — в 30 минутах от Перми.">
+<meta name="theme-color" content="#2B3A30">
+<style>
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/montserrat-cyrillic.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/montserrat-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+20BD,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ Tokens ============ */
+:root{
+  --bg:#E6E8E6;          /* light stone — base */
+  --surface:#F3F4F3;     /* raised layer, one step lighter */
+  --white:#FFFFFF;
+  --forest:#2B3A30;      /* ink, logo, footer */
+  --slate:#3A4A5A;       /* second dark: banya, links, icons */
+  --rose:#B75D69;        /* the only accent: primary CTA, small marks */
+  --rose-hover:#A6525D;
+  --muted:#52606E;       /* slate tint for secondary text (5.2:1 on --bg) */
+  --on-dark:#F3F4F3;
+  --on-dark-2:rgba(243,244,243,.8);
+  --hair:rgba(43,58,48,.14);
+  --hair-light:rgba(243,244,243,.18);
+
+  --r-photo:20px; --r-card:16px; --r-pill:999px;
+  --display:"Montserrat", "Manrope", system-ui, sans-serif;
+  --sans:"Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --pad:clamp(24px, 4vw, 56px);
+  --gutter:24px;
+  --section:120px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+
+/* ============ Base ============ */
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;overflow-x:clip;font:400 17px/1.6 var(--sans);color:var(--forest);background:var(--bg);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--slate)}
+h1,h2,h3,p,ul,dl,dd,figure,fieldset{margin:0}
+fieldset{border:0;padding:0;min-width:0}
+ul{padding:0;list-style:none}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+.icon{width:24px;height:24px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:6px}
+.on-dark :focus-visible{outline-color:var(--on-dark)}
+
+.container{width:min(1360px, 100% - 2 * var(--pad));margin-inline:auto}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter)}
+.section{padding-block:var(--section)}
+.sec-bg{background:var(--bg)}
+.sec-surface{background:var(--surface)}
+.sec-slate{background:var(--slate);color:var(--on-dark)}
+.sec-forest{background:var(--forest);color:var(--on-dark)}
+
+/* section label: their wave instead of a decorative line */
+.tag{display:inline-flex;align-items:center;gap:12px;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--slate)}
+.tag .icon{width:30px;height:8px;color:var(--rose);stroke-width:1.8}
+.on-dark .tag{color:var(--on-dark-2)}
+.on-dark .tag .icon{color:var(--on-dark)}
+.h2{margin-top:14px;font:800 clamp(34px, 3.6vw, 52px)/1.08 var(--display);letter-spacing:-.03em;text-wrap:balance}
+.h3{font:700 23px/1.2 var(--display);letter-spacing:-.02em}
+.lead{margin-top:16px;font-size:19px;line-height:1.5;color:var(--muted);max-width:46ch;text-wrap:pretty}
+.on-dark .lead{color:var(--on-dark-2)}
+.section-head{margin-bottom:56px}
+
+/* ============ Buttons ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 30px;border-radius:var(--r-pill);border:1.5px solid transparent;
+  font:700 17px/1 var(--sans);text-decoration:none;white-space:nowrap;transition:background-color .35s var(--ease), border-color .35s var(--ease), color .35s var(--ease), opacity .3s}
+.btn .icon{width:20px;height:20px;transition:transform .35s var(--ease)}
+.btn:hover .icon{transform:translateX(4px)}
+/* white on rose is 4.4:1 → the label is set large (19px bold) so it meets the 3:1 large-text rule */
+.btn--primary{background:var(--rose);color:var(--white);font-size:19px;min-height:60px}
+.btn--primary:hover{background:var(--rose-hover)}
+.btn--primary:disabled{opacity:.45;cursor:not-allowed}
+.btn--primary:disabled:hover{background:var(--rose)}
+.btn--primary:disabled .icon{transform:none}
+.btn--line{background:transparent;color:var(--forest);border-color:rgba(43,58,48,.3)}
+.btn--line:hover{border-color:var(--forest);background:rgba(43,58,48,.04)}
+.btn--line-light{background:transparent;color:var(--on-dark);border-color:rgba(243,244,243,.4)}
+.btn--line-light:hover{border-color:var(--on-dark)}
+.btn--block{width:100%}
+.link{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:700;color:inherit;text-decoration:none}
+.link .u{background:linear-gradient(currentColor,currentColor) 0 100%/0 1.5px no-repeat;padding-bottom:2px;transition:background-size .5s var(--ease)}
+.link:hover .u{background-size:100% 1.5px}
+.link .icon{width:20px;height:20px;transition:transform .35s var(--ease)}
+.link:hover .icon{transform:translateY(3px)}
+
+/* photos sit in frames; the image zooms slowly inside */
+.frame{position:relative;overflow:hidden;border-radius:var(--r-photo);background:#cfd3cf}
+.frame img{width:100%;height:100%;object-fit:cover;transform:scale(var(--s,1));transition:transform 1s var(--ease), opacity .6s var(--ease)}
+@media (hover:hover){ .frame:hover img{transform:scale(calc(var(--s,1) * 1.04))} }
+.js img.fade{opacity:0}
+.js img.fade.is-loaded{opacity:1}
+
+/* ============ HERO — magazine cover ============
+   Top bar: nav left · logo centre · phone right.
+   Variant A (.v-a): heavy Montserrat headline sits on the solid band, left edge on the same axis as the text under it.
+   Variant B (.v-b): centred Playfair headline over the water; its baseline rests on the pier railing (JS maps photo coords). */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;background:var(--bg)}
+/* the top bar sits on its own stone strip (mirrors the band below), so the links need no pill backgrounds */
+.hero__stage{position:relative;isolation:isolate;overflow:hidden;flex:1;display:flex;flex-direction:column;background:var(--bg)}
+.hero__media{position:absolute;inset:92px 0 0;z-index:-1;overflow:hidden}
+.hero__img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.topbar{position:relative;z-index:4;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;column-gap:24px;height:92px;padding-top:env(safe-area-inset-top)}
+.nav{display:flex;gap:30px;justify-self:start}
+.nav a,.phone{position:relative;display:inline-flex;align-items:center;min-height:44px;color:var(--forest);font:700 17px/1 var(--sans);text-decoration:none;transition:transform .35s var(--ease)}
+.nav a::after,.phone::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:2px;border-radius:2px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.nav a:hover,.phone:hover{transform:scale(1.06)}
+.nav a:hover::after,.phone:hover::after{transform:scaleX(1)}
+.nav a[aria-current],.nav a:active{color:var(--forest)}
+.logo{display:inline-flex;justify-self:center;color:var(--forest)}
+.logo svg{display:block;height:56px;width:auto;fill:currentColor}
+.topbar__right{display:flex;align-items:center;gap:10px;justify-self:end}
+.topbar__left{justify-self:start}
+.phone{gap:10px;white-space:nowrap}
+.phone::after{left:30px}
+.phone .icon{width:20px;height:20px}
+.round-btn{display:none;width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(43,58,48,.35);background:transparent;color:var(--forest);transition:border-color .35s var(--ease), transform .35s var(--ease);align-items:center;justify-content:center;padding:0}
+.round-btn .icon{width:22px;height:22px}
+.round-btn:hover{border-color:var(--forest);transform:scale(1.06)}
+
+.hero__band{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;column-gap:40px;padding-block:28px calc(28px + env(safe-area-inset-bottom))}
+.hero__title{grid-column:1 / -1;color:var(--forest)}
+.hero__title .t1,.hero__title .t2{display:block}
+.hero__sub{font-size:19px;line-height:1.45;font-weight:600;max-width:52ch}
+.hero__facts{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:6px;font-size:15px;font-weight:600;color:var(--muted)}
+.hero__facts li+li::before{content:"·";margin-right:12px}
+.hero__cta{display:flex;align-items:center;gap:12px 28px}
+
+/* Variant A — heavy Montserrat on the band, one line, left axis shared with «Шале…» */
+.v-a .hero__title{margin:0 0 22px;font:800 clamp(40px, 4.75vw, 76px)/1 "Montserrat", var(--sans);letter-spacing:-.035em;margin-left:-.04em}
+.v-a .hero__title .t1,.v-a .hero__title .t2{display:inline}
+.v-a .hero__band{padding-top:34px}
+.v-a .hero__img{object-position:50% 78%}
+
+/* Variant B — centred Playfair over the water, bottom line resting on the railing */
+.v-b .hero__title{position:absolute;z-index:3;left:0;right:0;top:var(--ty, 26%);transform:translateY(-100%);text-align:center;padding:0 var(--pad);pointer-events:none}
+/* zoom a little around the right-hand water so the birch on the left clears the centred line */
+.v-b .hero__img{transform:scale(1.3);transform-origin:62% 100%}
+.v-b .hero__title .t1{font:800 clamp(44px, 4.9vw, 76px)/1 var(--display);letter-spacing:-.04em;white-space:nowrap}
+.v-b .hero__title .t2{margin-top:8px;font:500 clamp(26px, 2.7vw, 42px)/1.05 var(--display);letter-spacing:-.02em}
+
+/* ============ EVENTS ============ */
+.ev-top{align-items:end}
+.ev-top__photo{grid-column:1 / span 7;aspect-ratio:3/2}
+.ev-top__text{grid-column:9 / span 4}
+.story{margin-top:96px}
+.story__item{grid-column:span 4}
+.story__photo{aspect-ratio:4/5}
+.story__step{display:block;margin-top:24px;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--rose)}
+.story__item .h3{margin-top:6px}
+.story__item p{margin-top:10px;color:var(--muted);max-width:36ch}
+.terms{margin-top:96px;align-items:start}
+.terms__head{grid-column:1 / span 4}
+.terms__list{grid-column:5 / span 8;display:grid;grid-template-columns:1fr 1fr;gap:18px 40px}
+.terms__list li{display:flex;gap:14px;align-items:flex-start;color:var(--muted)}
+.terms__list .icon{width:22px;height:22px;margin-top:2px;color:var(--slate)}
+.cta-card{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:80px;padding:36px 44px;border-radius:var(--r-card);background:var(--surface)}
+.cta-card__text{font:700 26px/1.25 var(--display);letter-spacing:-.02em;max-width:30ch}
+
+/* ============ HOUSES ============ */
+.houses__track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(5,auto);column-gap:var(--gutter)}
+.house{grid-row:span 5;display:grid;grid-template-rows:subgrid;row-gap:0;transition:transform .4s var(--ease)}
+.house__media{position:relative;margin-bottom:32px}
+.house__frame{aspect-ratio:4/5}
+.house__frame--tight img{--s:1.6;object-position:62% 52%;transform-origin:63% 55%}
+.house__inset{position:absolute;right:16px;bottom:-32px;width:44%;aspect-ratio:5/3;border-radius:var(--r-card);border:4px solid var(--surface)}
+.house__name{font:800 30px/1.1 var(--display);letter-spacing:-.03em;padding-top:4px;align-self:end}
+.house__feature{margin-top:6px;color:var(--muted);text-wrap:pretty}
+.price{margin-top:22px;padding:16px 20px;border-radius:var(--r-card);background:var(--bg)}
+.price__cap{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+.price__grid{display:grid;grid-template-columns:1fr 1fr;column-gap:16px;margin-top:8px}
+.price__cell+.price__cell{padding-left:16px;border-left:1px solid var(--hair)}
+.price__cell dt{font-size:14px;color:var(--muted);font-weight:600}
+.price__cell dd{font-size:21px;font-weight:600;line-height:1.3;font-variant-numeric:tabular-nums;white-space:nowrap}
+.price__cell .price__x{display:inline-block;margin-top:4px}
+.price__cell dt.price__x{margin-right:8px}
+.price__cell dd.price__x{font-size:17px}
+.house__cta{margin-top:24px;align-self:start}
+.houses__shared{display:flex;align-items:flex-start;gap:12px;margin-top:48px;padding-top:24px;border-top:1px solid var(--hair);color:var(--muted)}
+.houses__shared .icon{color:var(--slate);flex:none}
+.amen-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:20px}
+.amen-row__label{margin-right:6px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--slate)}
+.amen-chip{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px 0 12px;border-radius:var(--r-pill);background:var(--white);font-weight:600}
+.amen-chip .icon{width:20px;height:20px;color:var(--slate)}
+@media (hover:hover){ .house:hover{transform:translateY(-4px)} }
+
+/* ============ BANYA ============ */
+.banya{display:grid;grid-template-columns:512px minmax(0,1fr);column-gap:clamp(40px, 6vw, 96px);align-items:end}
+.banya__photo{width:512px;height:640px}
+.banya__photo img{object-position:50% 60%}
+.banya__body{display:flex;flex-direction:column;align-self:stretch}
+.banya__price{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin-top:24px}
+.chip{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:var(--r-pill);background:rgba(243,244,243,.1);font-weight:700}
+.note{font-size:14px;color:var(--on-dark-2)}
+.banya__cta{margin-top:24px;align-self:flex-start}
+.banya__photo2{margin-top:auto;padding-top:40px;width:min(100%, 440px)}
+.banya__photo2 .frame{aspect-ratio:4/3}
+
+/* ============ BOOKING ============ */
+.booking{scroll-margin-top:24px}
+.bk-tabs{display:inline-flex;gap:4px;padding:4px;border-radius:var(--r-pill);background:rgba(43,58,48,.07);margin-bottom:32px;max-width:100%;overflow-x:auto;scrollbar-width:none}
+.bk-tabs::-webkit-scrollbar{display:none}
+.bk-tab{flex:none;min-height:48px;padding:0 24px;border:0;border-radius:var(--r-pill);background:transparent;font-weight:700;color:var(--forest);transition:background-color .35s var(--ease), color .35s var(--ease), box-shadow .35s var(--ease)}
+.bk-tab:hover{background:rgba(43,58,48,.06)}
+.bk-tab[aria-selected="true"]{background:var(--forest);color:var(--on-dark)}
+.bk-grid{align-items:start}
+.bk-main{grid-column:1 / span 7;padding:32px;border-radius:var(--r-card);background:var(--surface)}
+.bk-side{grid-column:8 / span 5;position:sticky;top:24px}
+.bk-group+.bk-group,.bk-row+.bk-group,.bk-group+.bk-row{margin-top:26px}
+.bk-group__label{display:block;margin-bottom:12px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+.bk-group__hint{margin-top:8px;font-size:14px;color:var(--muted)}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border-radius:var(--r-pill);border:1px solid rgba(43,58,48,.2);background:var(--white);font-weight:600;color:var(--forest);transition:background-color .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease), box-shadow .35s var(--ease)}
+.opt:hover{border-color:var(--forest)}
+.opt[aria-pressed="true"]{background:var(--forest);border-color:var(--forest);color:var(--on-dark)}
+.opt:disabled{opacity:.4;cursor:not-allowed}
+.opt--house{padding-left:6px}
+.opt--house img{width:32px;height:32px;border-radius:50%;object-fit:cover}
+.opts--time{display:grid;grid-template-columns:repeat(6,minmax(0,1fr))}
+.opts--time .opt,.opts--month .opt{justify-content:center;padding:0 10px}
+.opts--month{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.stepper{display:inline-flex;align-items:center;gap:4px;padding:4px;border-radius:var(--r-pill);border:1px solid rgba(43,58,48,.2);background:var(--white);transition:box-shadow .35s var(--ease)}
+.stepper button{width:40px;height:40px;border-radius:50%;border:0;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--forest)}
+.stepper button:hover{background:#d9dcd9}
+.stepper button:disabled{opacity:.35;cursor:not-allowed}
+.stepper button .icon{width:18px;height:18px}
+.stepper output{min-width:96px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+.bk-row{display:flex;flex-wrap:wrap;gap:24px 32px}
+.toggle{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:12px;font-weight:600;color:var(--slate);background:none;border:0;padding:0}
+.toggle .box{width:22px;height:22px;border-radius:6px;border:1.5px solid rgba(43,58,48,.4);background:var(--white);display:grid;place-content:center}
+.toggle .box::after{content:"";width:12px;height:12px;background:var(--on-dark);clip-path:polygon(14% 52%, 0 66%, 38% 100%, 100% 22%, 86% 8%, 38% 72%);transform:scale(0);transition:transform .2s var(--ease)}
+.toggle[aria-pressed="true"] .box{background:var(--forest);border-color:var(--forest)}
+.toggle[aria-pressed="true"] .box::after{transform:scale(1)}
+
+.cal{margin-top:28px;padding-top:24px;border-top:1px solid var(--hair)}
+.cal__head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.cal__title{font:700 22px/1.2 var(--display);letter-spacing:-.01em}
+.cal__nav{display:flex;gap:8px}
+.cal__nav button{width:44px;height:44px;border-radius:50%;border:1px solid rgba(43,58,48,.2);background:var(--white);display:flex;align-items:center;justify-content:center;color:var(--forest)}
+.cal__nav button:hover{border-color:var(--forest)}
+.cal__nav button:disabled{opacity:.3;cursor:not-allowed}
+.cal__nav .icon{width:20px;height:20px}
+.cal__week,.cal__grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.cal__week span{text-align:center;font-size:13px;font-weight:700;color:var(--muted);padding-bottom:6px}
+.day{position:relative;height:48px;border:0;border-radius:var(--r-pill);background:transparent;font-weight:600;font-variant-numeric:tabular-nums;color:var(--forest);transition:background-color .3s var(--ease), color .3s var(--ease), box-shadow .35s var(--ease)}
+.day:hover:not(:disabled){background:var(--white)}
+.day:disabled{cursor:not-allowed;color:rgba(43,58,48,.3)}
+.day.is-busy{color:var(--muted);background:repeating-linear-gradient(135deg, rgba(58,74,90,.16) 0 1.5px, transparent 1.5px 7px);text-decoration:line-through;text-decoration-color:rgba(58,74,90,.4)}
+.day.in-range{background:rgba(183,93,105,.14);border-radius:10px}
+.day.is-sel{background:var(--forest);color:var(--on-dark)}
+.cal__cap{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin-top:16px;font-size:14px;color:var(--muted)}
+.cal__swatch{display:inline-block;width:18px;height:18px;border-radius:6px;vertical-align:-4px;margin-right:6px;background:repeating-linear-gradient(135deg, rgba(58,74,90,.24) 0 1.5px, transparent 1.5px 6px);border:1px solid var(--hair)}
+
+.bk-card{padding:28px;border-radius:var(--r-card);background:var(--white)}
+.bk-card__title{font:800 28px/1.15 var(--display);letter-spacing:-.03em}
+.sum{margin-top:14px}
+.sum__row{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--hair)}
+.sum__row dt{color:var(--muted)}
+.sum__row dd{font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.sum__total{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:16px}
+.sum__total span{font-weight:700}
+.sum__total b{font:800 32px/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.sum__empty{margin-top:12px;color:var(--muted)}
+.sum__note{margin-top:12px;font-size:14px;color:var(--muted)}
+.sum__inc{margin-top:18px}
+.sum__inc p{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+.sum__inc ul{margin-top:10px;display:grid;gap:8px}
+.sum__inc li{display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.sum__inc .icon{width:18px;height:18px;margin-top:3px;color:var(--slate)}
+.contact{margin-top:24px;padding-top:24px;border-top:1px solid var(--hair);display:grid;gap:14px}
+.field{display:grid;gap:6px}
+.field label,.field .lbl{font-size:14px;font-weight:700;color:var(--muted)}
+.field input{min-height:52px;padding:0 20px;border-radius:var(--r-pill);border:1px solid rgba(43,58,48,.22);background:var(--surface);font-weight:600;transition:border-color .3s var(--ease)}
+.field input:hover{border-color:rgba(43,58,48,.45)}
+.field input:focus-visible{border-color:var(--forest)}
+.field .opts .opt{min-height:40px;padding:0 14px;font-size:15px}
+.check{display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.45;color:var(--muted);cursor:pointer}
+.check input{appearance:none;-webkit-appearance:none;flex:none;width:22px;height:22px;margin:0;border-radius:6px;border:1.5px solid rgba(43,58,48,.4);background:var(--white);display:grid;place-content:center;cursor:pointer}
+.check input::after{content:"";width:12px;height:12px;background:var(--on-dark);clip-path:polygon(14% 52%, 0 66%, 38% 100%, 100% 22%, 86% 8%, 38% 72%);transform:scale(0);transition:transform .2s var(--ease)}
+.check input:checked{background:var(--forest);border-color:var(--forest)}
+.check input:checked::after{transform:scale(1)}
+.bk-success{margin-top:24px;padding:20px;border-radius:var(--r-card);background:var(--bg);display:flex;gap:12px;align-items:flex-start;font-weight:600}
+.bk-success .icon{color:var(--slate)}
+.bk-mbar{display:none}
+.flash{box-shadow:0 0 0 3px var(--rose), 0 0 0 8px rgba(183,93,105,.16)!important}
+
+/* ============ FOOTER ============ */
+.footer{padding:96px 0 40px}
+.footer__sign{aspect-ratio:21/7;border-radius:var(--r-photo)}
+.footer__sign img{object-position:50% 45%}
+.footer__main{margin-top:64px;row-gap:48px}
+.footer__brand{grid-column:1 / span 4}
+.footer__brand .logo-full{display:block;width:210px;height:auto;fill:var(--on-dark)}
+.footer__desc{margin-top:18px;color:var(--on-dark-2);max-width:30ch}
+.footer__reviews{margin-top:28px}
+.footer__col{grid-column:span 4}
+.footer__h{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--on-dark-2)}
+.footer address{margin-top:14px;font-style:normal;font-size:20px;line-height:1.4}
+.footer__muted{margin-top:8px;color:var(--on-dark-2)}
+.footer__phone{margin-top:16px}
+.footer__vk{margin-top:10px;color:var(--on-dark)}
+.footer__meta{margin-top:64px;padding-top:28px;border-top:1px solid var(--hair-light);row-gap:16px}
+.footer__meta p{grid-column:span 4;display:flex;gap:12px;align-items:flex-start;color:var(--on-dark-2)}
+.footer__meta .icon{color:var(--on-dark)}
+.footer__bottom{display:flex;justify-content:space-between;gap:24px;margin-top:40px;font-size:14px;color:var(--on-dark-2)}
+.footer__bottom a{color:var(--on-dark-2)}
+
+/* Mobile menu */
+.m-menu{position:fixed;z-index:60;left:16px;right:16px;top:calc(max(16px, env(safe-area-inset-top)) + 64px);padding:8px;border-radius:var(--r-card);background:var(--forest);color:var(--on-dark);box-shadow:0 24px 48px -16px rgba(0,0,0,.45)}
+.m-menu a{display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 16px;border-radius:12px;color:var(--on-dark);text-decoration:none;font-weight:700}
+.m-menu a:hover{background:rgba(243,244,243,.08)}
+
+/* ============ Motion ============ */
+.js .reveal{opacity:0;transform:translateY(12px);transition:opacity .6s var(--ease), transform .6s var(--ease)}
+.js .reveal.is-in{opacity:1;transform:none}
+.house.reveal.is-in{transition:opacity .6s var(--ease), transform .4s var(--ease)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .js .reveal,.js img.fade{opacity:1;transform:none}
+  .frame:hover img{transform:scale(var(--s,1))!important}
+  .house:hover,.btn:hover .icon,.link:hover .icon{transform:none!important}
+}
+
+/* ============ Responsive ============ */
+@media (max-width:1180px){
+  .nav{gap:20px}
+  .banya{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+  .banya__photo{width:100%;height:auto;aspect-ratio:4/5}
+}
+@media (max-width:1099px){
+  .nav{display:none}
+  .round-btn--menu{display:inline-flex}
+  .topbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}
+  .bk-main,.bk-side{grid-column:1 / -1}
+  .bk-side{position:static;margin-top:24px}
+  .ev-top__photo,.ev-top__text{grid-column:1 / -1}
+  .ev-top__text{margin-top:32px}
+  .terms__head,.terms__list{grid-column:1 / -1}
+  .terms__list{margin-top:24px}
+}
+@media (min-width:1100px){ .m-menu{display:none!important} }
+@media (max-width:760px){
+  :root{--section:72px;--gutter:16px}
+  body{font-size:16px}
+  .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+
+  /* Mobile hero: menu · logo · phone; clean arch photo; headline + CTA on the band */
+  .hero__stage{background:var(--bg)}
+  .hero__media{position:relative;inset:auto;z-index:0;flex:1;min-height:0;margin:16px var(--pad) 0;border-radius:var(--r-photo);overflow:hidden}
+  .hero__img{position:absolute;inset:0;object-position:50% 62%}
+  .topbar{grid-template-columns:48px 1fr 48px;height:auto;padding-top:max(16px, env(safe-area-inset-top))}
+  .logo svg{height:42px}
+  .phone--d,.nav{display:none}
+  .round-btn{display:inline-flex}
+  .hero__band{grid-template-columns:1fr;row-gap:12px;padding-block:18px calc(14px + env(safe-area-inset-bottom))}
+  .hero__sub{font-size:16px}
+  .hero__facts{display:none}
+  .hero__cta{flex-direction:column;align-items:stretch;gap:0}
+  .hero__cta .btn{width:100%}
+  .hero__cta .link{justify-content:center;order:2}
+  .v-a .hero__title{margin:0;font-size:min(38px, 9.8vw);line-height:1.02}
+  .v-b .hero__title{position:static;transform:none;padding:0;text-align:center}
+  .v-b .hero__img{transform:none}
+  .v-b .hero__title .t1{font-size:min(38px, 9.8vw);white-space:normal}
+  .v-b .hero__title .t2{font-size:min(28px, 7.4vw);margin-top:2px}
+  .v-b .hero__sub{text-align:center}
+
+  .section-head{margin-bottom:32px}
+  .h2{font-size:32px}
+  .lead{font-size:17px}
+  .story{margin-top:56px;row-gap:40px}
+  .story__item{grid-column:1 / -1}
+  .terms{margin-top:56px}
+  .terms__list{grid-template-columns:1fr}
+  .cta-card{flex-direction:column;align-items:stretch;margin-top:48px;padding:24px}
+  .cta-card .btn{width:100%}
+
+  .houses__track{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:82%;column-gap:16px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-inline:var(--pad);margin-inline:calc(-1 * var(--pad));padding:0 var(--pad) 12px;scrollbar-width:none}
+  .houses__track::-webkit-scrollbar{display:none}
+  .house{scroll-snap-align:start}
+  .house__name{font-size:26px}
+  .price{padding:14px 16px}
+  .house__cta{width:100%}
+
+  .banya{grid-template-columns:1fr}
+  .banya__photo{width:100%;height:auto;aspect-ratio:4/5}
+  .banya__body{margin-top:32px}
+  .banya__cta{width:100%}
+  .banya__photo2{width:100%;padding-top:32px}
+
+  .bk-tabs{display:flex;margin-inline:calc(-1 * var(--pad));padding:4px var(--pad);border-radius:0;background:none;gap:8px}
+  .bk-tab{border:1px solid rgba(43,58,48,.2);padding:0 18px}
+  .bk-main{padding:20px;margin-inline:calc(-1 * var(--pad) + 8px)}
+  .opts--time,.opts--month{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .day{height:44px}
+  .bk-card{padding:20px}
+  .bk-card .bk-submit{display:none}
+  .bk-mbar{position:sticky;z-index:20;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:12px;margin:24px calc(-1 * var(--pad)) calc(-1 * var(--section));padding:12px var(--pad) calc(12px + env(safe-area-inset-bottom));background:var(--bg);border-top:1px solid var(--hair)}
+  .bk-mbar__sum{display:flex;flex-direction:column;line-height:1.2}
+  .bk-mbar__sum span{font-size:13px;color:var(--muted)}
+  .bk-mbar__sum b{font:800 21px/1.1 var(--display)}
+  .bk-mbar .btn{min-height:52px;padding:0 20px;font-size:17px}
+
+  .footer{padding-top:48px}
+  .footer__sign{aspect-ratio:16/9}
+  .footer__brand,.footer__col,.footer__meta p{grid-column:1 / -1}
+  .footer__phone{width:100%}
+  .footer__bottom{flex-direction:column;gap:8px}
+}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113180107', 'ym');
+    ym(113180107, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/113180107" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.2 4h2.9l1.5 3.8-1.9 1.3a10.6 10.6 0 0 0 6.2 6.2l1.3-1.9 3.8 1.5v2.9A1.7 1.7 0 0 1 18.2 19.5 15 15 0 0 1 4.5 5.8 1.7 1.7 0 0 1 6.2 4z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M5 9.5h14M5 14.5h14"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M5 12h14M13.5 6.5 19 12l-5.5 5.5"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6.5 13.5 12 19l5.5-5.5"/></symbol>
+  <symbol id="i-upright" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11.2 12 4.5l8 6.7"/><path d="M6.5 9.5V19.5h11V9.5"/><path d="M10 19.5v-5h4v5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19l7.5-7.5"/></symbol>
+  <symbol id="i-pier" viewBox="0 0 24 24"><path d="M3 9.5h18"/><path d="M6.5 9.5v6M12 9.5v6M17.5 9.5v6"/><path d="M6.5 9.5V6M17.5 9.5V6"/><path d="M3 19c1.5-1.1 3-1.1 4.5 0s3 1.1 4.5 0 3-1.1 4.5 0 3 1.1 4.5 0"/></symbol>
+  <symbol id="i-sup" viewBox="0 0 24 24"><path d="M9 2.8c2 0 3.2 4 3.2 9.2S11 21.2 9 21.2 5.8 17.2 5.8 12 7 2.8 9 2.8z"/><path d="M9 16.5v2"/><path d="M17.5 3v11.5"/><path d="M16 3h3"/><path d="M17.5 14.5c-1.3 0-2 1-2 2.6 0 2 .9 3.9 2 3.9s2-1.9 2-3.9c0-1.6-.7-2.6-2-2.6z"/></symbol>
+  <symbol id="i-boat" viewBox="0 0 24 24"><path d="M3.5 13.5h17l-2.3 4H5.8z"/><path d="M7 13.5V10h6l2.5 3.5"/><path d="M9.5 10V6.5"/><path d="M3 21c1.5-1 3-1 4.5 0s3 1 4.5 0 3-1 4.5 0 3 1 4.5 0"/></symbol>
+  <symbol id="i-fish" viewBox="0 0 24 24"><path d="M6.5 12c2.6-3.4 6-4.8 9.3-4.3C18.2 8 20 10 21 12c-1 2-2.8 4-5.2 4.3-3.3.5-6.7-.9-9.3-4.3z"/><path d="M6.5 12 3 8.8v6.4z"/><path d="M16.8 11h.01"/></symbol>
+  <symbol id="i-banya" viewBox="0 0 24 24"><path d="M4.5 11.5h15l-1.6 8H6.1z"/><path d="M3 11.5h18"/><path d="M9 8.5c-.9-1.1.9-2 0-3.5M12.5 8.5c-.9-1.1.9-2 0-3.5M16 8.5c-.9-1.1.9-2 0-3.5"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><path d="M4.5 11.5h15v8h-15z"/><path d="M3.5 8h17v3.5h-17z"/><path d="M12 8v11.5"/><path d="M12 8c-1.3-3.2-5-3.6-5-1.6C7 7.8 9.4 8 12 8zM12 8c1.3-3.2 5-3.6 5-1.6C17 7.8 14.6 8 12 8z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12.5" rx="2"/><path d="M3 10h18M7 15h3.5"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M20.5 4 3.5 10.8l6.6 2.4 2.4 6.6z"/><path d="m10.1 13.2 4.4-4.4"/></symbol>
+  <symbol id="i-kitchen" viewBox="0 0 24 24"><path d="M6 4v6a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V4M8 4v16"/><path d="M16.5 20V4c-2 1-3 3.5-3 6.5h3"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M6 12h12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 6v12M6 12h12"/></symbol>
+  <symbol id="i-chev-left" viewBox="0 0 24 24"><path d="M14.5 6 8.5 12l6 6"/></symbol>
+  <symbol id="i-chev-down" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></symbol>
+  <symbol id="i-chev-right" viewBox="0 0 24 24"><path d="M9.5 6l6 6-6 6"/></symbol>
+  <symbol id="logo-word" viewBox="0 0 657.0 289.0"><path fill="currentColor" fill-rule="evenodd" d="M649.0 94.5 L644.8 94.5 L642.5 95.0 L631.5 100.8 L630.2 100.8 L628.5 98.8 L626.5 92.8 L624.5 90.8 L619.2 90.5 L616.0 91.5 L613.2 93.5 L613.0 99.2 L614.5 105.0 L615.8 107.8 L617.0 116.2 L617.0 121.0 L616.2 127.5 L616.2 140.2 L617.5 147.2 L618.2 149.0 L621.5 149.2 L625.2 148.0 L626.8 146.5 L628.2 142.8 L628.8 126.8 L630.0 121.5 L630.2 117.5 L631.5 114.5 L631.8 111.8 L633.2 107.5 L635.0 105.2 L639.2 101.5 L650.0 96.2 L650.8 95.5Z M145.8 90.0 L144.2 90.0 L143.8 95.8 L145.5 103.2 L146.8 106.2 L147.2 110.2 L148.2 113.5 L148.2 118.0 L147.2 121.2 L146.2 122.8 L144.5 124.0 L138.0 125.8 L134.8 127.2 L132.0 127.8 L128.0 127.8 L126.2 127.2 L123.5 125.2 L121.2 122.5 L119.2 117.0 L118.8 109.5 L117.5 105.2 L117.2 102.5 L116.0 100.2 L115.8 98.8 L114.0 96.0 L111.8 93.8 L108.8 92.5 L106.8 92.5 L104.5 93.2 L101.8 96.0 L101.8 103.2 L104.8 118.5 L106.2 122.8 L106.8 126.2 L107.8 128.0 L108.2 131.0 L110.0 135.2 L112.2 138.2 L118.2 142.8 L122.8 144.2 L128.0 144.2 L134.2 142.5 L147.2 135.8 L148.5 136.5 L149.8 140.8 L150.0 154.8 L148.2 166.0 L147.2 167.8 L146.8 171.0 L143.2 178.5 L140.2 182.5 L137.2 185.5 L133.2 188.2 L128.0 190.2 L118.2 190.5 L114.5 190.0 L111.8 188.8 L109.8 186.8 L109.0 184.2 L108.5 178.5 L107.5 176.8 L106.8 177.0 L106.2 179.2 L106.2 184.2 L107.5 187.8 L108.5 189.2 L112.2 192.5 L117.0 194.2 L120.2 194.8 L127.0 194.5 L132.0 193.0 L139.2 188.8 L145.0 183.0 L148.0 178.5 L151.2 171.5 L151.2 170.0 L152.8 165.5 L153.0 160.8 L154.5 151.5 L155.2 136.8 L155.2 119.2 L154.5 108.5 L152.8 99.8 L151.5 97.5 L151.0 95.2 L149.5 92.8 L147.0 90.5Z M559.5 88.5 L554.5 91.0 L551.5 93.2 L547.0 99.0 L546.2 101.5 L545.0 103.5 L544.2 109.2 L544.2 113.8 L544.8 118.5 L546.8 124.2 L549.0 128.8 L553.0 134.0 L557.8 138.5 L565.8 144.2 L569.8 145.8 L572.8 146.2 L577.8 146.2 L582.2 144.5 L583.2 144.5 L587.0 142.5 L589.0 140.5 L588.5 140.0 L586.2 140.0 L579.5 141.5 L575.2 141.5 L568.0 139.0 L564.8 136.8 L559.5 130.8 L557.2 126.8 L556.8 124.8 L557.0 121.5 L558.5 119.5 L563.5 117.5 L582.8 114.8 L583.5 114.2 L587.8 113.5 L589.5 112.5 L591.5 112.2 L595.5 110.5 L599.0 107.8 L599.0 105.5 L597.8 101.0 L595.5 98.0 L591.0 93.8 L585.0 90.5 L582.2 90.0 L579.0 88.5 L569.8 87.2 L566.8 87.2Z M558.2 103.8 L558.2 102.8 L559.2 101.0 L561.8 98.8 L563.8 97.5 L567.5 96.5 L571.8 96.5 L575.5 97.5 L579.2 99.5 L580.8 101.0 L580.5 102.8 L578.5 104.2 L573.5 105.5 L568.0 105.5 L566.5 105.0 L559.2 104.5Z M260.2 88.8 L255.5 94.5 L254.5 98.0 L254.5 101.0 L255.2 102.0 L258.0 102.5 L265.2 102.2 L267.8 101.2 L272.5 100.5 L276.2 99.2 L281.5 99.2 L283.8 100.0 L286.0 101.5 L289.2 105.2 L291.0 108.2 L290.8 110.8 L288.8 112.5 L283.0 115.5 L280.5 116.0 L277.5 117.5 L275.0 118.0 L273.5 119.0 L271.8 119.2 L266.0 122.5 L264.0 124.5 L262.2 127.8 L261.8 134.2 L262.2 137.8 L264.8 142.5 L266.8 144.2 L270.8 146.2 L278.0 146.5 L281.0 146.0 L288.5 142.8 L297.2 135.8 L298.2 135.5 L300.5 137.8 L302.8 142.5 L304.8 143.0 L305.5 142.2 L304.8 133.0 L303.8 129.2 L303.2 123.5 L300.5 112.8 L300.2 109.5 L299.0 106.2 L298.5 102.0 L297.2 99.2 L296.8 95.8 L295.8 94.0 L295.2 91.5 L293.0 88.2 L290.5 86.0 L286.5 83.8 L282.2 82.8 L276.8 82.5 L269.0 84.0 L262.8 87.0Z M293.0 121.2 L293.0 124.2 L292.0 128.2 L287.8 133.5 L282.0 136.8 L278.2 137.8 L272.0 138.2 L271.2 137.5 L271.0 132.5 L271.8 129.8 L274.2 125.8 L277.5 123.0 L282.5 120.8 L286.2 120.0 L291.8 120.0Z M463.5 81.2 L461.0 83.0 L460.2 86.0 L460.8 102.2 L462.5 109.5 L465.5 114.8 L467.0 129.2 L467.2 137.5 L468.8 146.2 L470.0 149.0 L470.5 151.5 L472.8 154.2 L473.5 152.2 L473.2 146.8 L471.8 137.5 L471.2 128.8 L470.2 124.0 L470.0 108.5 L471.8 97.8 L473.5 93.0 L476.2 88.8 L476.5 87.2 L475.2 85.8 L467.5 82.0Z M488.2 77.5 L486.5 79.5 L486.5 84.2 L487.0 86.2 L488.0 87.5 L488.2 89.0 L489.5 90.5 L490.0 92.2 L492.5 95.8 L494.2 99.8 L494.8 102.8 L496.0 105.2 L498.2 113.0 L499.5 115.2 L500.0 118.2 L501.0 119.8 L501.2 121.8 L502.5 124.2 L502.8 126.5 L505.8 133.8 L508.2 144.8 L510.0 147.5 L513.5 148.8 L514.8 148.5 L516.5 145.5 L517.0 141.8 L518.5 137.0 L518.8 133.8 L519.8 131.2 L520.0 128.2 L523.8 115.2 L526.5 108.8 L526.8 107.0 L529.5 101.5 L536.0 92.8 L536.0 90.0 L535.0 89.8 L533.2 91.5 L524.0 103.8 L519.2 114.0 L518.8 116.0 L517.5 118.0 L517.2 119.8 L515.5 123.2 L514.8 123.8 L513.5 121.8 L513.2 117.2 L512.5 114.2 L511.8 92.2 L510.2 88.0 L505.0 83.0 L497.5 78.8 L493.0 77.2Z M205.0 77.5 L202.8 80.0 L202.5 83.2 L203.8 87.5 L210.0 98.2 L215.0 116.2 L216.5 119.5 L218.2 125.2 L219.5 127.5 L221.8 134.5 L222.8 136.0 L223.0 139.2 L225.0 145.8 L227.5 148.0 L230.8 148.8 L231.5 148.5 L232.2 147.2 L233.2 143.0 L234.0 135.8 L235.2 132.0 L235.8 127.8 L236.8 125.8 L238.8 118.2 L245.2 104.0 L246.5 102.5 L249.8 94.8 L251.5 91.8 L251.8 90.0 L250.8 89.8 L249.5 90.5 L246.0 94.0 L242.5 98.8 L238.0 108.0 L237.2 111.0 L236.5 111.8 L234.0 119.0 L233.2 119.5 L232.2 122.5 L231.2 123.0 L229.8 121.2 L229.0 113.8 L227.5 106.8 L227.5 100.0 L228.5 95.2 L228.5 92.8 L226.5 87.8 L223.0 84.0 L215.0 79.0 L209.2 77.2Z M474.5 46.5 L467.5 46.5 L463.8 47.8 L461.5 48.0 L458.5 50.0 L457.8 51.0 L456.8 54.2 L457.5 59.0 L459.8 62.2 L462.8 64.8 L467.8 65.8 L471.2 64.8 L473.2 63.0 L473.5 56.8 L474.8 49.2Z M394.8 17.2 L391.5 19.0 L390.0 20.5 L389.2 22.2 L389.5 35.0 L388.0 43.5 L387.8 50.0 L386.5 55.5 L385.8 66.0 L385.0 69.0 L384.5 77.0 L383.2 83.8 L382.8 91.5 L381.5 95.8 L381.5 99.2 L380.0 106.2 L379.8 111.2 L378.5 117.2 L378.0 126.5 L377.2 130.0 L377.0 139.2 L378.5 146.5 L379.0 147.5 L381.2 149.5 L384.8 150.0 L385.5 149.2 L385.8 148.0 L384.2 142.8 L383.8 139.0 L383.5 130.2 L384.5 118.5 L385.8 111.5 L386.0 106.0 L389.0 93.5 L391.2 90.5 L393.0 90.2 L399.2 93.0 L404.8 98.0 L419.0 117.0 L433.2 132.0 L448.0 150.8 L453.8 155.8 L456.2 157.2 L459.0 157.8 L459.8 157.0 L459.2 155.8 L447.8 142.8 L447.2 141.0 L445.8 139.2 L440.0 128.8 L439.0 126.0 L436.0 121.0 L435.8 119.8 L429.8 108.0 L429.5 106.5 L428.0 104.2 L421.5 87.8 L421.5 83.5 L433.0 74.8 L435.8 70.8 L437.2 66.5 L439.0 54.0 L439.0 47.0 L437.5 36.5 L436.0 33.0 L435.8 30.8 L433.2 26.0 L430.2 22.0 L427.0 19.0 L420.5 15.5 L418.0 15.2 L415.0 14.2 L407.5 14.2 L402.5 15.5 L399.5 15.8 L396.8 17.0Z M415.8 26.2 L418.5 28.8 L420.0 31.0 L421.5 36.2 L421.8 49.8 L419.8 62.2 L417.2 67.0 L414.2 70.0 L410.0 72.8 L402.2 75.2 L397.5 75.2 L396.0 74.8 L394.2 73.5 L393.5 71.2 L393.8 62.8 L394.2 59.5 L395.2 57.5 L395.8 53.5 L397.0 50.8 L397.2 47.8 L398.0 46.2 L398.8 42.5 L399.0 37.0 L400.5 31.5 L403.0 28.5 L406.5 26.5 L411.0 25.5Z M179.5 10.2 L177.5 18.8 L172.2 25.0 L172.5 26.2 L174.0 28.2 L174.2 30.8 L173.0 33.0 L171.0 35.2 L171.5 36.2 L174.5 36.2 L176.0 37.8 L176.0 39.5 L172.0 48.0 L172.8 49.2 L174.5 49.8 L175.5 50.8 L175.8 51.8 L166.0 63.5 L165.0 65.5 L165.0 66.2 L167.0 66.2 L167.8 65.8 L171.0 66.0 L172.5 66.8 L173.0 68.0 L163.5 76.8 L161.8 78.8 L160.8 80.8 L161.2 81.2 L163.8 81.2 L167.0 80.0 L169.0 79.8 L171.0 78.5 L175.5 77.5 L178.0 77.5 L179.0 78.5 L179.0 101.0 L177.8 119.2 L176.2 123.8 L176.0 126.5 L175.2 127.8 L173.0 135.5 L172.0 144.0 L173.0 145.8 L176.2 147.5 L179.0 148.0 L183.2 148.0 L187.5 146.2 L191.2 142.5 L193.0 133.2 L192.8 122.2 L191.2 104.0 L190.2 98.8 L190.0 92.2 L188.8 87.2 L188.5 83.0 L187.0 77.0 L187.2 74.0 L191.0 69.5 L191.2 68.2 L187.5 64.0 L187.0 62.8 L187.8 62.0 L189.2 62.0 L195.0 63.5 L195.8 63.2 L195.8 62.2 L190.2 56.8 L187.0 52.0 L186.8 48.8 L187.8 47.0 L187.8 46.0 L186.5 42.8 L183.5 38.0 L183.5 36.8 L184.2 36.0 L187.0 35.8 L187.2 35.0 L184.0 31.0 L183.2 28.8 L183.5 26.2 L186.0 23.5 L186.2 22.2 L182.5 17.5 L180.2 10.5Z M76.8 6.0 L74.5 6.0 L71.5 7.2 L69.5 7.5 L67.2 8.8 L64.5 9.2 L61.2 10.8 L43.5 14.2 L37.0 17.0 L30.8 21.8 L25.8 27.8 L23.8 31.2 L21.0 39.0 L21.0 49.8 L22.0 51.5 L22.8 54.5 L26.0 59.5 L32.0 65.0 L38.2 68.5 L48.0 75.2 L61.8 83.5 L64.8 85.8 L69.8 90.8 L72.0 94.2 L75.5 101.5 L76.2 104.5 L77.2 106.2 L77.8 110.0 L78.8 112.8 L78.8 122.2 L77.5 125.8 L77.2 128.0 L73.5 134.8 L69.0 139.0 L64.8 141.8 L60.8 143.2 L55.0 144.2 L50.2 144.2 L45.0 143.2 L40.0 141.5 L35.5 138.5 L29.2 132.5 L22.0 119.5 L18.2 115.2 L13.2 112.5 L7.2 112.0 L6.2 113.2 L6.0 116.0 L6.5 122.0 L7.2 123.2 L8.0 126.5 L10.0 130.2 L13.2 134.2 L16.0 136.8 L24.5 142.8 L29.5 145.0 L30.8 146.0 L40.0 149.2 L50.5 150.2 L58.0 149.0 L66.8 145.5 L72.8 141.5 L77.2 136.8 L81.5 129.0 L83.0 123.8 L83.5 120.5 L83.5 112.2 L83.0 109.5 L82.0 106.8 L81.5 103.0 L80.2 100.5 L80.0 98.8 L79.0 97.5 L78.5 95.5 L76.0 91.0 L69.8 83.2 L63.0 77.2 L38.5 60.0 L33.5 54.5 L31.8 50.8 L31.2 46.8 L31.8 41.2 L35.0 35.0 L38.0 31.5 L41.8 28.5 L48.5 25.0 L56.0 23.2 L65.5 23.2 L71.2 25.2 L78.0 30.5 L82.8 32.8 L84.5 32.8 L88.0 30.8 L88.8 28.5 L88.0 23.2 L87.0 21.8 L86.0 18.8 L79.8 8.2Z M30.8 241.0 L32.8 244.5 L33.0 245.8 L34.8 248.0 L36.2 249.0 L43.5 243.8 L47.8 241.5 L49.8 241.2 L51.2 240.5 L55.2 240.0 L59.0 240.2 L63.5 241.5 L69.8 245.0 L74.8 248.8 L93.5 267.5 L105.2 277.0 L111.5 280.2 L113.2 280.5 L116.2 282.0 L124.0 282.8 L131.8 282.0 L134.2 280.8 L136.5 280.2 L142.8 277.0 L154.0 268.0 L170.2 251.5 L175.8 246.8 L181.5 243.0 L189.2 240.2 L195.8 240.2 L198.0 241.2 L200.2 241.5 L202.0 242.8 L203.8 243.2 L210.0 247.5 L214.8 251.8 L230.5 267.8 L235.5 272.2 L242.0 277.0 L247.5 280.0 L253.0 282.0 L261.0 282.8 L268.5 282.0 L271.5 280.5 L273.2 280.2 L279.5 277.0 L287.8 270.8 L307.5 251.0 L314.5 245.2 L321.5 241.5 L326.0 240.2 L329.2 240.0 L336.2 241.8 L345.0 247.0 L352.5 253.5 L368.2 269.2 L378.5 277.0 L384.5 280.2 L386.2 280.5 L389.5 282.0 L399.2 282.8 L406.8 281.5 L413.5 278.5 L418.8 275.2 L423.0 272.0 L429.8 265.8 L444.5 250.8 L450.8 245.5 L457.5 241.8 L462.8 240.2 L468.8 240.2 L473.5 241.5 L480.8 245.5 L488.8 252.2 L503.8 267.5 L512.5 275.0 L517.5 278.2 L522.2 280.5 L524.0 280.8 L526.5 282.0 L533.8 282.8 L543.0 281.8 L544.2 280.8 L546.8 280.2 L550.5 278.5 L558.8 272.8 L565.0 267.2 L584.0 248.2 L590.0 244.0 L594.2 241.8 L599.2 240.2 L607.2 240.5 L609.0 241.5 L611.0 241.8 L613.8 243.2 L614.8 242.8 L616.0 239.5 L617.8 236.8 L618.5 234.2 L611.8 231.2 L604.8 230.0 L600.8 230.0 L595.2 230.8 L586.5 234.0 L579.0 239.2 L572.5 244.8 L556.5 261.0 L551.0 265.8 L543.0 270.8 L536.0 272.8 L530.8 272.5 L528.8 271.5 L526.0 271.0 L520.2 268.0 L512.2 261.5 L495.0 244.0 L486.8 237.2 L478.8 232.5 L477.8 232.5 L473.5 230.8 L468.0 230.0 L463.8 230.0 L456.2 231.2 L449.5 234.2 L440.0 241.0 L415.2 265.0 L408.8 269.5 L405.5 271.0 L403.0 271.5 L401.0 272.5 L395.5 272.8 L390.0 271.2 L383.8 268.2 L376.5 262.8 L359.0 245.5 L348.8 237.0 L340.5 232.5 L336.2 231.0 L331.8 230.2 L325.2 230.2 L320.5 231.0 L312.8 234.2 L308.8 236.8 L302.5 241.8 L296.2 247.5 L285.5 258.8 L275.2 267.5 L269.0 271.0 L261.5 272.8 L256.5 272.2 L255.2 271.5 L252.8 271.0 L246.5 267.8 L240.5 263.0 L218.5 241.2 L208.8 234.2 L200.8 231.0 L194.5 230.0 L189.8 230.0 L186.8 230.8 L184.5 230.8 L176.0 234.2 L166.2 241.2 L150.8 256.8 L141.8 265.0 L135.2 269.5 L134.0 269.8 L133.0 270.8 L130.2 271.2 L128.2 272.2 L125.0 272.8 L120.5 272.5 L117.8 271.2 L115.8 271.0 L109.5 267.5 L104.0 263.2 L84.8 244.0 L79.0 239.0 L72.0 234.2 L65.0 231.2 L57.8 230.0 L51.8 230.2 L46.2 231.2 L39.8 234.0 L32.0 239.2Z"/></symbol>
+  <symbol id="logo-full" viewBox="0 0 657.0 513.0"><path fill="currentColor" fill-rule="evenodd" d="M30.8 465.0 L32.8 468.5 L33.0 469.8 L34.8 472.0 L36.2 473.0 L43.5 467.8 L47.8 465.5 L49.8 465.2 L51.2 464.5 L55.2 464.0 L59.0 464.2 L63.5 465.5 L69.8 469.0 L74.8 472.8 L93.5 491.5 L105.2 501.0 L111.5 504.2 L113.2 504.5 L116.2 506.0 L124.0 506.8 L131.8 506.0 L134.2 504.8 L136.5 504.2 L142.8 501.0 L154.0 492.0 L170.2 475.5 L175.8 470.8 L181.5 467.0 L189.2 464.2 L195.8 464.2 L198.0 465.2 L200.2 465.5 L202.0 466.8 L203.8 467.2 L210.0 471.5 L214.8 475.8 L230.5 491.8 L235.5 496.2 L242.0 501.0 L247.5 504.0 L253.0 506.0 L261.0 506.8 L268.5 506.0 L271.5 504.5 L273.2 504.2 L279.5 501.0 L287.8 494.8 L307.5 475.0 L314.5 469.2 L321.5 465.5 L326.0 464.2 L329.2 464.0 L336.2 465.8 L345.0 471.0 L352.5 477.5 L368.2 493.2 L378.5 501.0 L384.5 504.2 L386.2 504.5 L389.5 506.0 L399.2 506.8 L406.8 505.5 L413.5 502.5 L418.8 499.2 L423.0 496.0 L429.8 489.8 L444.5 474.8 L450.8 469.5 L457.5 465.8 L462.8 464.2 L468.8 464.2 L473.5 465.5 L480.8 469.5 L488.8 476.2 L503.8 491.5 L512.5 499.0 L517.5 502.2 L522.2 504.5 L524.0 504.8 L526.5 506.0 L533.8 506.8 L543.0 505.8 L544.2 504.8 L546.8 504.2 L550.5 502.5 L558.8 496.8 L565.0 491.2 L584.0 472.2 L590.0 468.0 L594.2 465.8 L599.2 464.2 L607.2 464.5 L609.0 465.5 L611.0 465.8 L613.8 467.2 L614.8 466.8 L616.0 463.5 L617.8 460.8 L618.5 458.2 L611.8 455.2 L604.8 454.0 L600.8 454.0 L595.2 454.8 L586.5 458.0 L579.0 463.2 L572.5 468.8 L556.5 485.0 L551.0 489.8 L543.0 494.8 L536.0 496.8 L530.8 496.5 L528.8 495.5 L526.0 495.0 L520.2 492.0 L512.2 485.5 L495.0 468.0 L486.8 461.2 L478.8 456.5 L477.8 456.5 L473.5 454.8 L468.0 454.0 L463.8 454.0 L456.2 455.2 L449.5 458.2 L440.0 465.0 L415.2 489.0 L408.8 493.5 L405.5 495.0 L403.0 495.5 L401.0 496.5 L395.5 496.8 L390.0 495.2 L383.8 492.2 L376.5 486.8 L359.0 469.5 L348.8 461.0 L340.5 456.5 L336.2 455.0 L331.8 454.2 L325.2 454.2 L320.5 455.0 L312.8 458.2 L308.8 460.8 L302.5 465.8 L296.2 471.5 L285.5 482.8 L275.2 491.5 L269.0 495.0 L261.5 496.8 L256.5 496.2 L255.2 495.5 L252.8 495.0 L246.5 491.8 L240.5 487.0 L218.5 465.2 L208.8 458.2 L200.8 455.0 L194.5 454.0 L189.8 454.0 L186.8 454.8 L184.5 454.8 L176.0 458.2 L166.2 465.2 L150.8 480.8 L141.8 489.0 L135.2 493.5 L134.0 493.8 L133.0 494.8 L130.2 495.2 L128.2 496.2 L125.0 496.8 L120.5 496.5 L117.8 495.2 L115.8 495.0 L109.5 491.5 L104.0 487.2 L84.8 468.0 L79.0 463.0 L72.0 458.2 L65.0 455.2 L57.8 454.0 L51.8 454.2 L46.2 455.2 L39.8 458.0 L32.0 463.2Z M649.0 318.5 L644.8 318.5 L642.5 319.0 L631.5 324.8 L630.2 324.8 L628.5 322.8 L626.5 316.8 L624.5 314.8 L619.2 314.5 L616.0 315.5 L613.2 317.5 L613.0 323.2 L614.5 329.0 L615.8 331.8 L617.0 340.2 L617.0 345.0 L616.2 351.5 L616.2 364.2 L617.5 371.2 L618.2 373.0 L621.5 373.2 L625.2 372.0 L626.8 370.5 L628.2 366.8 L628.8 350.8 L630.0 345.5 L630.2 341.5 L631.5 338.5 L631.8 335.8 L633.2 331.5 L635.0 329.2 L639.2 325.5 L650.0 320.2 L650.8 319.5Z M145.8 314.0 L144.2 314.0 L143.8 319.8 L145.5 327.2 L146.8 330.2 L147.2 334.2 L148.2 337.5 L148.2 342.0 L147.2 345.2 L146.2 346.8 L144.5 348.0 L138.0 349.8 L134.8 351.2 L132.0 351.8 L128.0 351.8 L126.2 351.2 L123.5 349.2 L121.2 346.5 L119.2 341.0 L118.8 333.5 L117.5 329.2 L117.2 326.5 L116.0 324.2 L115.8 322.8 L114.0 320.0 L111.8 317.8 L108.8 316.5 L106.8 316.5 L104.5 317.2 L101.8 320.0 L101.8 327.2 L104.8 342.5 L106.2 346.8 L106.8 350.2 L107.8 352.0 L108.2 355.0 L110.0 359.2 L112.2 362.2 L118.2 366.8 L122.8 368.2 L128.0 368.2 L134.2 366.5 L147.2 359.8 L148.5 360.5 L149.8 364.8 L150.0 378.8 L148.2 390.0 L147.2 391.8 L146.8 395.0 L143.2 402.5 L140.2 406.5 L137.2 409.5 L133.2 412.2 L128.0 414.2 L118.2 414.5 L114.5 414.0 L111.8 412.8 L109.8 410.8 L109.0 408.2 L108.5 402.5 L107.5 400.8 L106.8 401.0 L106.2 403.2 L106.2 408.2 L107.5 411.8 L108.5 413.2 L112.2 416.5 L117.0 418.2 L120.2 418.8 L127.0 418.5 L132.0 417.0 L139.2 412.8 L145.0 407.0 L148.0 402.5 L151.2 395.5 L151.2 394.0 L152.8 389.5 L153.0 384.8 L154.5 375.5 L155.2 360.8 L155.2 343.2 L154.5 332.5 L152.8 323.8 L151.5 321.5 L151.0 319.2 L149.5 316.8 L147.0 314.5Z M559.5 312.5 L554.5 315.0 L551.5 317.2 L547.0 323.0 L546.2 325.5 L545.0 327.5 L544.2 333.2 L544.2 337.8 L544.8 342.5 L546.8 348.2 L549.0 352.8 L553.0 358.0 L557.8 362.5 L565.8 368.2 L569.8 369.8 L572.8 370.2 L577.8 370.2 L582.2 368.5 L583.2 368.5 L587.0 366.5 L589.0 364.5 L588.5 364.0 L586.2 364.0 L579.5 365.5 L575.2 365.5 L568.0 363.0 L564.8 360.8 L559.5 354.8 L557.2 350.8 L556.8 348.8 L557.0 345.5 L558.5 343.5 L563.5 341.5 L582.8 338.8 L583.5 338.2 L587.8 337.5 L589.5 336.5 L591.5 336.2 L595.5 334.5 L599.0 331.8 L599.0 329.5 L597.8 325.0 L595.5 322.0 L591.0 317.8 L585.0 314.5 L582.2 314.0 L579.0 312.5 L569.8 311.2 L566.8 311.2Z M558.2 327.8 L558.2 326.8 L559.2 325.0 L561.8 322.8 L563.8 321.5 L567.5 320.5 L571.8 320.5 L575.5 321.5 L579.2 323.5 L580.8 325.0 L580.5 326.8 L578.5 328.2 L573.5 329.5 L568.0 329.5 L566.5 329.0 L559.2 328.5Z M260.2 312.8 L255.5 318.5 L254.5 322.0 L254.5 325.0 L255.2 326.0 L258.0 326.5 L265.2 326.2 L267.8 325.2 L272.5 324.5 L276.2 323.2 L281.5 323.2 L283.8 324.0 L286.0 325.5 L289.2 329.2 L291.0 332.2 L290.8 334.8 L288.8 336.5 L283.0 339.5 L280.5 340.0 L277.5 341.5 L275.0 342.0 L273.5 343.0 L271.8 343.2 L266.0 346.5 L264.0 348.5 L262.2 351.8 L261.8 358.2 L262.2 361.8 L264.8 366.5 L266.8 368.2 L270.8 370.2 L278.0 370.5 L281.0 370.0 L288.5 366.8 L297.2 359.8 L298.2 359.5 L300.5 361.8 L302.8 366.5 L304.8 367.0 L305.5 366.2 L304.8 357.0 L303.8 353.2 L303.2 347.5 L300.5 336.8 L300.2 333.5 L299.0 330.2 L298.5 326.0 L297.2 323.2 L296.8 319.8 L295.8 318.0 L295.2 315.5 L293.0 312.2 L290.5 310.0 L286.5 307.8 L282.2 306.8 L276.8 306.5 L269.0 308.0 L262.8 311.0Z M293.0 345.2 L293.0 348.2 L292.0 352.2 L287.8 357.5 L282.0 360.8 L278.2 361.8 L272.0 362.2 L271.2 361.5 L271.0 356.5 L271.8 353.8 L274.2 349.8 L277.5 347.0 L282.5 344.8 L286.2 344.0 L291.8 344.0Z M463.5 305.2 L461.0 307.0 L460.2 310.0 L460.8 326.2 L462.5 333.5 L465.5 338.8 L467.0 353.2 L467.2 361.5 L468.8 370.2 L470.0 373.0 L470.5 375.5 L472.8 378.2 L473.5 376.2 L473.2 370.8 L471.8 361.5 L471.2 352.8 L470.2 348.0 L470.0 332.5 L471.8 321.8 L473.5 317.0 L476.2 312.8 L476.5 311.2 L475.2 309.8 L467.5 306.0Z M488.2 301.5 L486.5 303.5 L486.5 308.2 L487.0 310.2 L488.0 311.5 L488.2 313.0 L489.5 314.5 L490.0 316.2 L492.5 319.8 L494.2 323.8 L494.8 326.8 L496.0 329.2 L498.2 337.0 L499.5 339.2 L500.0 342.2 L501.0 343.8 L501.2 345.8 L502.5 348.2 L502.8 350.5 L505.8 357.8 L508.2 368.8 L510.0 371.5 L513.5 372.8 L514.8 372.5 L516.5 369.5 L517.0 365.8 L518.5 361.0 L518.8 357.8 L519.8 355.2 L520.0 352.2 L523.8 339.2 L526.5 332.8 L526.8 331.0 L529.5 325.5 L536.0 316.8 L536.0 314.0 L535.0 313.8 L533.2 315.5 L524.0 327.8 L519.2 338.0 L518.8 340.0 L517.5 342.0 L517.2 343.8 L515.5 347.2 L514.8 347.8 L513.5 345.8 L513.2 341.2 L512.5 338.2 L511.8 316.2 L510.2 312.0 L505.0 307.0 L497.5 302.8 L493.0 301.2Z M205.0 301.5 L202.8 304.0 L202.5 307.2 L203.8 311.5 L210.0 322.2 L215.0 340.2 L216.5 343.5 L218.2 349.2 L219.5 351.5 L221.8 358.5 L222.8 360.0 L223.0 363.2 L225.0 369.8 L227.5 372.0 L230.8 372.8 L231.5 372.5 L232.2 371.2 L233.2 367.0 L234.0 359.8 L235.2 356.0 L235.8 351.8 L236.8 349.8 L238.8 342.2 L245.2 328.0 L246.5 326.5 L249.8 318.8 L251.5 315.8 L251.8 314.0 L250.8 313.8 L249.5 314.5 L246.0 318.0 L242.5 322.8 L238.0 332.0 L237.2 335.0 L236.5 335.8 L234.0 343.0 L233.2 343.5 L232.2 346.5 L231.2 347.0 L229.8 345.2 L229.0 337.8 L227.5 330.8 L227.5 324.0 L228.5 319.2 L228.5 316.8 L226.5 311.8 L223.0 308.0 L215.0 303.0 L209.2 301.2Z M474.5 270.5 L467.5 270.5 L463.8 271.8 L461.5 272.0 L458.5 274.0 L457.8 275.0 L456.8 278.2 L457.5 283.0 L459.8 286.2 L462.8 288.8 L467.8 289.8 L471.2 288.8 L473.2 287.0 L473.5 280.8 L474.8 273.2Z M394.8 241.2 L391.5 243.0 L390.0 244.5 L389.2 246.2 L389.5 259.0 L388.0 267.5 L387.8 274.0 L386.5 279.5 L385.8 290.0 L385.0 293.0 L384.5 301.0 L383.2 307.8 L382.8 315.5 L381.5 319.8 L381.5 323.2 L380.0 330.2 L379.8 335.2 L378.5 341.2 L378.0 350.5 L377.2 354.0 L377.0 363.2 L378.5 370.5 L379.0 371.5 L381.2 373.5 L384.8 374.0 L385.5 373.2 L385.8 372.0 L384.2 366.8 L383.8 363.0 L383.5 354.2 L384.5 342.5 L385.8 335.5 L386.0 330.0 L389.0 317.5 L391.2 314.5 L393.0 314.2 L399.2 317.0 L404.8 322.0 L419.0 341.0 L433.2 356.0 L448.0 374.8 L453.8 379.8 L456.2 381.2 L459.0 381.8 L459.8 381.0 L459.2 379.8 L447.8 366.8 L447.2 365.0 L445.8 363.2 L440.0 352.8 L439.0 350.0 L436.0 345.0 L435.8 343.8 L429.8 332.0 L429.5 330.5 L428.0 328.2 L421.5 311.8 L421.5 307.5 L433.0 298.8 L435.8 294.8 L437.2 290.5 L439.0 278.0 L439.0 271.0 L437.5 260.5 L436.0 257.0 L435.8 254.8 L433.2 250.0 L430.2 246.0 L427.0 243.0 L420.5 239.5 L418.0 239.2 L415.0 238.2 L407.5 238.2 L402.5 239.5 L399.5 239.8 L396.8 241.0Z M415.8 250.2 L418.5 252.8 L420.0 255.0 L421.5 260.2 L421.8 273.8 L419.8 286.2 L417.2 291.0 L414.2 294.0 L410.0 296.8 L402.2 299.2 L397.5 299.2 L396.0 298.8 L394.2 297.5 L393.5 295.2 L393.8 286.8 L394.2 283.5 L395.2 281.5 L395.8 277.5 L397.0 274.8 L397.2 271.8 L398.0 270.2 L398.8 266.5 L399.0 261.0 L400.5 255.5 L403.0 252.5 L406.5 250.5 L411.0 249.5Z M179.5 234.2 L177.5 242.8 L172.2 249.0 L172.5 250.2 L174.0 252.2 L174.2 254.8 L173.0 257.0 L171.0 259.2 L171.5 260.2 L174.5 260.2 L176.0 261.8 L176.0 263.5 L172.0 272.0 L172.8 273.2 L174.5 273.8 L175.5 274.8 L175.8 275.8 L166.0 287.5 L165.0 289.5 L165.0 290.2 L167.0 290.2 L167.8 289.8 L171.0 290.0 L172.5 290.8 L173.0 292.0 L163.5 300.8 L161.8 302.8 L160.8 304.8 L161.2 305.2 L163.8 305.2 L167.0 304.0 L169.0 303.8 L171.0 302.5 L175.5 301.5 L178.0 301.5 L179.0 302.5 L179.0 325.0 L177.8 343.2 L176.2 347.8 L176.0 350.5 L175.2 351.8 L173.0 359.5 L172.0 368.0 L173.0 369.8 L176.2 371.5 L179.0 372.0 L183.2 372.0 L187.5 370.2 L191.2 366.5 L193.0 357.2 L192.8 346.2 L191.2 328.0 L190.2 322.8 L190.0 316.2 L188.8 311.2 L188.5 307.0 L187.0 301.0 L187.2 298.0 L191.0 293.5 L191.2 292.2 L187.5 288.0 L187.0 286.8 L187.8 286.0 L189.2 286.0 L195.0 287.5 L195.8 287.2 L195.8 286.2 L190.2 280.8 L187.0 276.0 L186.8 272.8 L187.8 271.0 L187.8 270.0 L186.5 266.8 L183.5 262.0 L183.5 260.8 L184.2 260.0 L187.0 259.8 L187.2 259.0 L184.0 255.0 L183.2 252.8 L183.5 250.2 L186.0 247.5 L186.2 246.2 L182.5 241.5 L180.2 234.5Z M76.8 230.0 L74.5 230.0 L71.5 231.2 L69.5 231.5 L67.2 232.8 L64.5 233.2 L61.2 234.8 L43.5 238.2 L37.0 241.0 L30.8 245.8 L25.8 251.8 L23.8 255.2 L21.0 263.0 L21.0 273.8 L22.0 275.5 L22.8 278.5 L26.0 283.5 L32.0 289.0 L38.2 292.5 L48.0 299.2 L61.8 307.5 L64.8 309.8 L69.8 314.8 L72.0 318.2 L75.5 325.5 L76.2 328.5 L77.2 330.2 L77.8 334.0 L78.8 336.8 L78.8 346.2 L77.5 349.8 L77.2 352.0 L73.5 358.8 L69.0 363.0 L64.8 365.8 L60.8 367.2 L55.0 368.2 L50.2 368.2 L45.0 367.2 L40.0 365.5 L35.5 362.5 L29.2 356.5 L22.0 343.5 L18.2 339.2 L13.2 336.5 L7.2 336.0 L6.2 337.2 L6.0 340.0 L6.5 346.0 L7.2 347.2 L8.0 350.5 L10.0 354.2 L13.2 358.2 L16.0 360.8 L24.5 366.8 L29.5 369.0 L30.8 370.0 L40.0 373.2 L50.5 374.2 L58.0 373.0 L66.8 369.5 L72.8 365.5 L77.2 360.8 L81.5 353.0 L83.0 347.8 L83.5 344.5 L83.5 336.2 L83.0 333.5 L82.0 330.8 L81.5 327.0 L80.2 324.5 L80.0 322.8 L79.0 321.5 L78.5 319.5 L76.0 315.0 L69.8 307.2 L63.0 301.2 L38.5 284.0 L33.5 278.5 L31.8 274.8 L31.2 270.8 L31.8 265.2 L35.0 259.0 L38.0 255.5 L41.8 252.5 L48.5 249.0 L56.0 247.2 L65.5 247.2 L71.2 249.2 L78.0 254.5 L82.8 256.8 L84.5 256.8 L88.0 254.8 L88.8 252.5 L88.0 247.2 L87.0 245.8 L86.0 242.8 L79.8 232.2Z M158.0 127.2 L155.8 126.8 L145.0 128.0 L139.2 130.0 L133.2 133.2 L131.2 133.2 L129.2 131.5 L124.2 129.2 L111.8 129.2 L106.2 128.2 L105.8 129.2 L108.2 131.5 L112.8 133.2 L124.8 134.2 L127.5 136.8 L128.2 139.8 L128.8 140.2 L130.2 140.2 L138.8 133.8 L142.5 132.2 L145.0 132.2 L154.0 130.5 L156.8 129.0Z M552.0 102.5 L550.5 102.2 L549.0 103.2 L544.0 104.5 L531.5 104.8 L528.0 105.2 L523.2 107.5 L518.5 111.5 L517.5 111.5 L511.0 107.2 L506.0 105.2 L495.8 103.8 L484.8 103.8 L484.8 104.2 L486.2 105.8 L491.2 108.0 L502.0 108.8 L507.8 109.8 L511.2 111.8 L517.0 117.5 L521.5 119.0 L523.0 119.0 L523.5 118.5 L523.2 115.2 L524.2 113.2 L527.2 112.5 L528.8 111.5 L543.5 109.2 L547.2 107.5 L551.2 104.0Z M438.8 57.5 L437.0 58.0 L434.5 62.8 L433.5 63.8 L430.0 70.8 L418.2 82.0 L416.8 84.2 L417.5 86.2 L422.0 91.8 L422.0 93.2 L414.8 100.2 L405.5 107.5 L406.2 109.2 L411.5 114.2 L412.0 115.5 L411.2 116.5 L401.8 122.0 L397.5 125.0 L398.0 126.5 L403.5 131.0 L403.5 133.0 L398.8 137.0 L391.2 140.8 L384.2 143.0 L384.2 144.5 L388.2 149.8 L391.8 153.2 L396.2 156.2 L404.5 159.5 L414.0 161.0 L417.8 161.0 L419.2 162.2 L419.5 163.0 L418.8 167.0 L418.2 174.5 L417.5 175.8 L415.5 188.5 L414.0 194.0 L413.5 201.5 L414.0 206.5 L416.0 209.2 L421.0 210.8 L424.2 210.5 L426.8 209.2 L428.8 206.8 L429.8 204.0 L430.8 197.2 L431.0 173.5 L431.2 171.8 L433.0 167.5 L435.5 165.2 L437.0 164.8 L454.5 164.5 L458.8 163.0 L469.8 156.2 L470.5 154.5 L467.8 151.5 L456.0 140.8 L454.5 138.8 L455.0 137.2 L461.2 134.8 L463.0 133.8 L463.2 132.8 L456.0 126.8 L450.8 121.5 L450.5 120.8 L451.5 119.0 L456.8 116.0 L458.5 114.2 L457.8 112.2 L454.0 108.2 L449.0 100.0 L446.0 96.2 L446.0 95.2 L447.5 93.8 L453.2 89.8 L453.8 89.0 L453.8 87.8 L447.5 80.2 L444.5 74.8Z M216.8 57.0 L215.0 60.2 L214.8 63.2 L213.0 70.8 L211.2 74.5 L207.8 80.2 L202.0 88.0 L202.0 89.5 L204.8 91.5 L208.0 94.8 L208.5 95.8 L208.2 97.2 L205.8 101.2 L204.5 104.5 L201.5 108.2 L196.0 113.8 L197.0 115.2 L202.2 117.8 L204.8 120.0 L202.2 123.2 L192.2 133.0 L192.5 133.8 L194.5 135.2 L199.2 137.2 L200.2 138.5 L200.0 139.8 L184.5 152.8 L184.2 154.0 L188.5 157.5 L192.8 160.2 L197.8 162.8 L201.0 163.5 L202.2 164.2 L207.5 165.0 L216.5 164.8 L220.0 163.8 L222.0 165.2 L223.0 171.0 L224.2 197.0 L225.0 203.8 L226.2 207.0 L228.2 209.2 L230.8 210.2 L235.2 210.2 L237.8 209.5 L240.0 207.5 L241.8 203.8 L242.0 202.0 L241.5 191.5 L240.5 188.5 L240.0 183.2 L239.0 180.5 L238.5 176.0 L237.8 174.5 L236.8 168.2 L235.8 165.5 L235.5 162.2 L236.8 161.2 L239.8 161.2 L250.2 159.5 L255.2 158.0 L259.5 156.0 L263.2 153.5 L266.8 150.2 L270.5 144.5 L270.5 143.0 L259.5 138.5 L254.5 135.2 L252.2 133.0 L252.0 132.2 L252.5 131.0 L257.8 126.5 L258.0 125.0 L250.5 121.2 L245.8 118.2 L243.5 116.0 L243.5 115.0 L250.0 108.2 L250.0 107.2 L240.8 101.2 L233.2 93.5 L233.2 91.2 L238.8 85.2 L238.8 84.2 L236.5 81.8 L226.5 73.2 L223.0 68.0 L218.8 59.5Z M328.2 6.0 L326.0 12.0 L325.0 13.5 L323.0 20.0 L319.8 26.8 L311.5 36.5 L305.2 42.8 L305.5 44.8 L308.2 47.8 L313.5 50.8 L313.8 53.2 L312.2 55.2 L311.2 57.8 L305.8 64.5 L297.5 71.8 L294.0 75.5 L295.0 77.0 L296.8 77.8 L297.8 78.8 L299.0 79.0 L303.5 81.5 L304.2 82.5 L304.2 83.5 L298.0 90.2 L286.2 98.2 L286.2 99.5 L288.2 101.2 L289.5 101.5 L296.8 106.0 L297.2 106.8 L297.2 108.0 L290.8 111.8 L289.5 113.0 L273.8 123.0 L273.2 123.8 L273.2 125.0 L276.2 128.2 L282.2 133.2 L288.2 137.0 L291.2 138.5 L292.8 138.8 L295.2 140.2 L297.2 140.5 L301.2 142.0 L304.8 142.2 L308.5 143.2 L317.2 143.2 L319.2 144.5 L319.8 171.5 L318.5 182.0 L318.5 195.5 L320.2 200.2 L322.5 202.2 L326.2 203.8 L333.0 203.8 L335.2 203.2 L336.8 202.2 L338.5 199.2 L337.5 175.0 L337.0 142.8 L339.0 141.5 L359.2 140.2 L363.2 139.0 L367.0 138.5 L368.0 137.8 L370.2 137.2 L374.0 135.2 L374.8 135.2 L379.8 131.2 L383.8 126.8 L385.2 124.5 L385.2 123.5 L383.0 121.8 L381.8 121.5 L376.0 118.0 L367.5 111.5 L362.2 108.5 L361.0 107.2 L362.0 105.5 L372.2 100.0 L373.0 98.8 L371.5 97.2 L361.8 91.5 L356.0 86.2 L353.8 83.2 L354.0 82.0 L355.0 81.0 L364.0 76.5 L364.8 75.8 L364.8 74.8 L359.0 70.0 L357.5 69.2 L352.2 64.2 L344.2 53.2 L344.2 51.8 L346.0 50.0 L349.5 48.0 L352.8 44.2 L353.0 43.0 L351.2 40.8 L346.2 36.5 L342.0 31.5 L339.0 27.0 L335.8 20.8 L335.5 19.2 L334.0 16.8 L334.0 15.8 L333.0 14.2 L330.5 7.2 L329.2 6.0Z"/></symbol>
+  <symbol id="i-wave" viewBox="0 0 30 8"><path d="M1 4c2.3-3.2 4.7-3.2 7 0s4.7 3.2 7 0 4.7-3.2 7 0 4.7 3.2 7 0"/></symbol>
+</svg>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="hero__stage">
+    <div class="container topbar">
+      <nav class="nav" aria-label="Разделы">
+        <a href="#events">Свадьбы</a><a href="#houses">Дома</a><a href="#banya">Баня</a><a href="#contacts">Контакты</a>
+      </nav>
+      <button class="round-btn round-btn--menu topbar__left" type="button" aria-label="Меню" aria-expanded="false" aria-controls="m-menu" data-menu-toggle><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
+      <a class="logo" href="#top" aria-label="Сылва Ривер — на главную"><svg viewBox="0 0 657 289" aria-hidden="true"><use href="#logo-word"/></svg></a>
+      <div class="topbar__right">
+        <a class="phone phone--d" href="tel:+79026418002"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>+7&nbsp;(902)&nbsp;641&#8209;80&#8209;02</a>
+        <a class="round-btn round-btn--phone" href="tel:+79026418002" aria-label="Позвонить: +7 (902) 641-80-02"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></a>
+      </div>
+    </div>
+    <picture class="hero__media">
+      <source media="(max-width: 760px)" srcset="images/river-terrace.jpg" width="1330" height="2000">
+      <img class="hero__img" src="images/hero-pier.jpg" width="2560" height="1707" fetchpriority="high" decoding="async"
+           alt="Жених и невеста идут к белому пирсу на высоком берегу Сылвы, внизу широкая река">
+    </picture>
+  </div>
+  <div class="container hero__band">
+    <h1 class="hero__title"><span class="t1">Свадьба на&nbsp;высоком</span> <span class="t2">берегу Сылвы</span></h1>
+    <div>
+      <p class="hero__sub">Шале, терраса над рекой и&nbsp;ночёвка для гостей&nbsp;— в&nbsp;30&nbsp;минутах от&nbsp;Перми</p>
+      <ul class="hero__facts" aria-label="Коротко"><li>до&nbsp;70&nbsp;гостей</li><li>терраса 450&nbsp;м²</li><li>свой алкоголь без&nbsp;пробкового сбора</li></ul>
+    </div>
+    <div class="hero__cta">
+      <a class="link" href="#events"><span class="u">Посмотреть площадку</span><svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a>
+      <button class="btn btn--primary" type="button" data-book="event">Узнать, свободна ли&nbsp;дата</button>
+    </div>
+  </div>
+</header>
+
+<nav class="m-menu" id="m-menu" aria-label="Меню" hidden>
+  <a href="#events">Свадьбы<svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></a>
+  <a href="#houses">Дома<svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></a>
+  <a href="#banya">Баня<svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></a>
+  <a href="#booking" data-book="last">Бронирование<svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></a>
+  <a href="#contacts">Контакты<svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></a>
+  <a href="tel:+79026418002">+7&nbsp;(902)&nbsp;641&#8209;80&#8209;02<svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></a>
+</nav>
+
+<main>
+<!-- ================= WEDDINGS ================= -->
+<section class="section sec-bg" id="events" aria-labelledby="events-title">
+  <div class="container">
+    <div class="grid ev-top">
+      <figure class="frame ev-top__photo reveal">
+        <img class="fade" src="images/chalet-front.jpg" width="2200" height="1467" loading="lazy" decoding="async"
+             alt="Шале «Сылва Ривер» с панорамным остеклением и плетёными креслами на каменной площадке">
+      </figure>
+      <div class="ev-top__text">
+        <p class="tag reveal"><svg class="icon" aria-hidden="true"><use href="#i-wave"/></svg>Свадьбы и&nbsp;праздники</p>
+        <h2 class="h2 reveal" id="events-title">Шале для свадеб и&nbsp;праздников</h2>
+        <p class="lead reveal">Двухэтажное шале с&nbsp;огромным панорамным остеклением на&nbsp;высоком берегу Сылвы.</p>
+      </div>
+    </div>
+
+    <div class="grid story">
+      <article class="story__item reveal">
+        <figure class="frame story__photo"><img class="fade" src="images/ceremony.jpg" width="2000" height="1334" loading="lazy" decoding="async"
+          alt="Арка из пампасной травы и белых цветов на каменной террасе над рекой"></figure>
+        <span class="story__step">Церемония</span>
+        <h3 class="h3">Терраса над рекой</h3>
+        <p>Открытая терраса 450&nbsp;м² из&nbsp;натурального камня с&nbsp;видом на&nbsp;разлив реки.</p>
+      </article>
+      <article class="story__item reveal">
+        <figure class="frame story__photo"><img class="fade" src="images/chalet-hall.jpg" width="1334" height="2000" loading="lazy" decoding="async"
+          alt="Банкетный зал шале: каменный камин, панорамные окна и сервированные столы"></figure>
+        <span class="story__step">Банкет</span>
+        <h3 class="h3">Зал с&nbsp;камином</h3>
+        <p>До&nbsp;60&nbsp;гостей за&nbsp;столами или до&nbsp;70 на&nbsp;фуршете. Камин, русская печь, гардероб на&nbsp;100&nbsp;мест.</p>
+      </article>
+      <article class="story__item reveal">
+        <figure class="frame story__photo"><img class="fade" src="images/fountains.jpg" width="2000" height="1334" loading="lazy" decoding="async"
+          alt="Жених поднимает невесту на фоне холодных фонтанов у шале"></figure>
+        <span class="story__step">Вечер</span>
+        <h3 class="h3">Холодные фонтаны</h3>
+        <p>Вместо салюта&nbsp;— холодные фонтаны от&nbsp;партнёра «Салют Пермь». Аренда до&nbsp;23:00.</p>
+      </article>
+    </div>
+
+    <div class="grid terms">
+      <div class="terms__head reveal">
+        <p class="tag"><svg class="icon" aria-hidden="true"><use href="#i-wave"/></svg>Условия</p>
+        <h3 class="h3" style="margin-top:14px">Что важно знать заранее</h3>
+      </div>
+      <ul class="terms__list reveal">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Алкоголь, напитки и&nbsp;торт&nbsp;— ваши, без&nbsp;пробкового сбора</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Кейтеринг-партнёры: Чадов, Буров, Гуд&nbsp;фуд; другие&nbsp;— индивидуально</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Задаток 50%, остаток&nbsp;— за&nbsp;30&nbsp;дней; залог 20&nbsp;000&nbsp;₽ возвращается</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Аренда зала и&nbsp;террасы 10:00–23:00, технический час до&nbsp;00:00</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Зона кухни, 2&nbsp;санузла, выход к&nbsp;воде с&nbsp;пирсом</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Гостям&nbsp;— три авторских дома для ночёвки</li>
+      </ul>
+    </div>
+
+    <div class="cta-card reveal">
+      <p class="cta-card__text">Стоимость зависит от&nbsp;даты&nbsp;— рассчитаем для вашего события</p>
+      <button class="btn btn--primary" type="button" data-book="event">Узнать, свободна ли&nbsp;дата</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOUSES ================= -->
+<section class="section sec-surface" id="houses" aria-labelledby="houses-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="tag reveal"><svg class="icon" aria-hidden="true"><use href="#i-wave"/></svg>Дома</p>
+      <h2 class="h2 reveal" id="houses-title">Три авторских дома</h2>
+      <p class="lead reveal">Для отдыха на&nbsp;выходных и&nbsp;для гостей вашего праздника</p>
+    </div>
+
+    <div class="houses__track">
+      <article class="house reveal" id="house-sokhatka" aria-labelledby="h-sokhatka">
+        <figure class="house__media">
+          <div class="frame house__frame"><img class="fade" src="images/sokhatka.jpg" width="1707" height="2560" loading="lazy" decoding="async"
+               alt="Каменный дом «Сохатка» с красной крышей, рогами лося на фасаде и плетёными креслами у входа"></div>
+          <div class="frame house__inset"><img class="fade" src="images/sokhatka-inside.jpg" width="2000" height="1500" loading="lazy" decoding="async"
+               alt="Кухня-гостиная «Сохатки» — вид с галереи второго света"></div>
+        </figure>
+        <h3 class="house__name" id="h-sokhatka">Сохатка</h3>
+        <p class="house__feature">Камин и второй свет · мангальная зона у&nbsp;дома</p>
+        <div class="price"><p class="price__cap">Цена за сутки</p>
+          <dl class="price__grid"><div class="price__cell"><dt>пн–чт</dt><dd>14&nbsp;000&nbsp;₽</dd></div><div class="price__cell"><dt>пт–вс</dt><dd>16&nbsp;000&nbsp;₽</dd></div></dl></div>
+        <button class="btn btn--line house__cta" type="button" data-book="house" data-house="sokhatka">Выбрать даты</button>
+      </article>
+
+      <article class="house reveal" id="house-sudak" aria-labelledby="h-sudak">
+        <figure class="house__media">
+          <div class="frame house__frame"><img class="fade" src="images/sudak.jpg" width="1334" height="2000" loading="lazy" decoding="async"
+               alt="Дом «Судак» из камня и дерева с гамаком среди сосен"></div>
+          <div class="frame house__inset"><img class="fade" src="images/sudak-inside.jpg" width="1170" height="688" loading="lazy" decoding="async"
+               alt="Гостиная «Судака»: камин и обеденная зона у панорамных окон"></div>
+        </figure>
+        <h3 class="house__name" id="h-sudak">Судак</h3>
+        <p class="house__feature">Камин и панорамное остекление</p>
+        <div class="price"><p class="price__cap">Цена за сутки</p>
+          <dl class="price__grid"><div class="price__cell"><dt>пн–чт</dt><dd>14&nbsp;000&nbsp;₽</dd></div><div class="price__cell"><dt>пт–вс</dt><dd>17&nbsp;000&nbsp;₽</dd></div></dl></div>
+        <button class="btn btn--line house__cta" type="button" data-book="house" data-house="sudak">Выбрать даты</button>
+      </article>
+
+      <article class="house reveal" id="house-kiprey" aria-labelledby="h-kiprey">
+        <figure class="house__media">
+          <div class="frame house__frame house__frame--tight"><img class="fade" src="images/kiprey.jpg" width="1500" height="2000" loading="lazy" decoding="async"
+               alt="Дом «Кипрей» среди сосен на берегу Сылвы"></div>
+          <div class="frame house__inset"><img class="fade" src="images/kiprey-inside.jpg" width="1500" height="2000" loading="lazy" decoding="async"
+               alt="Гостиная «Кипрея» с окнами на реку на закате"></div>
+        </figure>
+        <h3 class="house__name" id="h-kiprey">Кипрей</h3>
+        <p class="house__feature">Вид на реку из гостиной · 2&nbsp;санузла</p>
+        <div class="price"><p class="price__cap">Цена за сутки</p>
+          <dl class="price__grid"><div class="price__cell"><dt>пн–чт</dt><dd>17&nbsp;000&nbsp;₽</dd></div>
+            <div class="price__cell"><dt>пт–сб</dt><dd>19&nbsp;000&nbsp;₽</dd><dt class="price__x">вс</dt><dd class="price__x">18&nbsp;000&nbsp;₽</dd></div></dl></div>
+        <button class="btn btn--line house__cta" type="button" data-book="house" data-house="kiprey">Выбрать даты</button>
+      </article>
+    </div>
+
+    <p class="houses__shared reveal"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg>
+      <span>Цены за&nbsp;сутки на&nbsp;4&nbsp;гостей · до&nbsp;6&nbsp;гостей, доп. гость +1&nbsp;500&nbsp;₽ · кухня с&nbsp;посудой в&nbsp;каждом доме · заезд с&nbsp;15:00, выезд до&nbsp;12:00</span></p>
+    <ul class="amen-row reveal" aria-label="На территории">
+      <li class="amen-row__label" aria-hidden="true">На территории</li>
+      <li class="amen-chip"><svg class="icon" aria-hidden="true"><use href="#i-pier"/></svg>Пирс</li>
+      <li class="amen-chip"><svg class="icon" aria-hidden="true"><use href="#i-sup"/></svg>Сапы</li>
+      <li class="amen-chip"><svg class="icon" aria-hidden="true"><use href="#i-boat"/></svg>Прогулки на&nbsp;катере</li>
+      <li class="amen-chip"><svg class="icon" aria-hidden="true"><use href="#i-fish"/></svg>Рыбалка</li>
+      <li class="amen-chip"><svg class="icon" aria-hidden="true"><use href="#i-gift"/></svg>Подарочные сертификаты</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= BANYA ================= -->
+<section class="section sec-slate on-dark" id="banya" aria-labelledby="banya-title">
+  <div class="container banya">
+    <figure class="frame banya__photo reveal">
+      <img class="fade" src="images/banya.jpg" width="1500" height="2000" loading="lazy" decoding="async"
+           alt="Комната отдыха в бане: тёплый свет соляной лампы, банные шапки и столик с лимонадом">
+    </figure>
+    <div class="banya__body">
+      <p class="tag reveal"><svg class="icon" aria-hidden="true"><use href="#i-wave"/></svg>Баня</p>
+      <h2 class="h2 reveal" id="banya-title">Банный ретрит на&nbsp;берегу реки</h2>
+      <p class="lead reveal">Светлый и&nbsp;уютный уголок, где за&nbsp;пару часов можно очистить тело и&nbsp;ум и&nbsp;восполнить энергию.</p>
+      <div class="banya__price reveal">
+        <span class="chip">2&nbsp;250&nbsp;₽/час · от&nbsp;2&nbsp;часов</span>
+        <span class="note">Веники&nbsp;— отдельно</span>
+      </div>
+      <button class="btn btn--primary banya__cta reveal" type="button" data-book="banya">Забронировать баню</button>
+      <div class="banya__photo2">
+        <figure class="frame reveal"><img class="fade" src="images/banya-river.jpg" width="1080" height="810" loading="lazy" decoding="async"
+             alt="Стеклянная дверь бани открывается на каменный двор и реку"></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BOOKING ================= -->
+<section class="section sec-bg booking" id="booking" aria-labelledby="booking-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="tag reveal"><svg class="icon" aria-hidden="true"><use href="#i-wave"/></svg>Заявка</p>
+      <h2 class="h2 reveal" id="booking-title">Бронирование</h2>
+      <p class="lead reveal">Выберите, что планируете&nbsp;— и&nbsp;мы свяжемся, чтобы подтвердить дату</p>
+    </div>
+
+    <div class="bk-tabs" role="tablist" aria-label="Что бронируем">
+      <button class="bk-tab" role="tab" id="tab-event" data-tab="event" aria-selected="true" aria-controls="bk-panel">Свадьба или праздник</button>
+      <button class="bk-tab" role="tab" id="tab-house" data-tab="house" aria-selected="false" aria-controls="bk-panel" tabindex="-1">Дом</button>
+      <button class="bk-tab" role="tab" id="tab-banya" data-tab="banya" aria-selected="false" aria-controls="bk-panel" tabindex="-1">Баня</button>
+    </div>
+
+    <div class="grid bk-grid">
+      <div class="bk-main" id="bk-panel" role="tabpanel" aria-labelledby="tab-event">
+        <div class="bk-opts" data-for="event">
+          <fieldset class="bk-group">
+            <legend class="bk-group__label">Повод</legend>
+            <div class="opts" id="ev-format">
+              <button type="button" class="opt" data-val="свадьба" aria-pressed="true">Свадьба</button>
+              <button type="button" class="opt" data-val="день рождения" aria-pressed="false">День рождения</button>
+              <button type="button" class="opt" data-val="корпоратив" aria-pressed="false">Корпоратив</button>
+              <button type="button" class="opt" data-val="другое" aria-pressed="false">Другое</button>
+            </div>
+          </fieldset>
+          <div class="bk-group">
+            <span class="bk-group__label" id="ev-guests-l">Примерно гостей</span>
+            <div class="stepper" id="ev-guests" role="group" aria-labelledby="ev-guests-l">
+              <button type="button" data-step="-5" aria-label="Меньше гостей"><svg class="icon" aria-hidden="true"><use href="#i-minus"/></svg></button>
+              <output aria-live="polite">50</output>
+              <button type="button" data-step="5" aria-label="Больше гостей"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+            </div>
+            <p class="bk-group__hint">До&nbsp;60&nbsp;гостей за&nbsp;столами, до&nbsp;70&nbsp;— фуршет</p>
+          </div>
+          <div class="bk-group">
+            <span class="bk-group__label">Дата</span>
+            <button type="button" class="toggle" id="ev-unsure" aria-pressed="false"><span class="box" aria-hidden="true"></span>Пока не&nbsp;знаем точную дату</button>
+            <div class="opts opts--month" id="ev-month" hidden style="margin-top:12px"></div>
+          </div>
+        </div>
+        <div class="bk-opts" data-for="house" hidden>
+          <fieldset class="bk-group">
+            <legend class="bk-group__label">Дом</legend>
+            <div class="opts" id="hs-house">
+              <button type="button" class="opt opt--house" data-val="sokhatka" aria-pressed="true"><img src="images/sokhatka.jpg" alt="" width="32" height="32" loading="lazy">Сохатка</button>
+              <button type="button" class="opt opt--house" data-val="sudak" aria-pressed="false"><img src="images/sudak.jpg" alt="" width="32" height="32" loading="lazy">Судак</button>
+              <button type="button" class="opt opt--house" data-val="kiprey" aria-pressed="false"><img src="images/kiprey.jpg" alt="" width="32" height="32" loading="lazy">Кипрей</button>
+            </div>
+          </fieldset>
+          <div class="bk-group">
+            <span class="bk-group__label" id="hs-guests-l">Гостей</span>
+            <div class="stepper" id="hs-guests" role="group" aria-labelledby="hs-guests-l">
+              <button type="button" data-step="-1" aria-label="Меньше гостей"><svg class="icon" aria-hidden="true"><use href="#i-minus"/></svg></button>
+              <output aria-live="polite">4</output>
+              <button type="button" data-step="1" aria-label="Больше гостей"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+            </div>
+            <p class="bk-group__hint">Тариф на&nbsp;4&nbsp;гостей, до&nbsp;6&nbsp;гостей; доп. гость +1&nbsp;500&nbsp;₽ за&nbsp;ночь</p>
+          </div>
+        </div>
+        <div class="bk-opts" data-for="banya" hidden>
+          <fieldset class="bk-group">
+            <legend class="bk-group__label">Начало</legend>
+            <div class="opts opts--time" id="bn-time"></div>
+          </fieldset>
+          <div class="bk-group">
+            <span class="bk-group__label" id="bn-dur-l">Длительность</span>
+            <div class="stepper" id="bn-dur" role="group" aria-labelledby="bn-dur-l">
+              <button type="button" data-step="-1" aria-label="Меньше часов"><svg class="icon" aria-hidden="true"><use href="#i-minus"/></svg></button>
+              <output aria-live="polite">2&nbsp;часа</output>
+              <button type="button" data-step="1" aria-label="Больше часов"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+            </div>
+            <p class="bk-group__hint">От&nbsp;2&nbsp;часов · веники&nbsp;— отдельно</p>
+          </div>
+        </div>
+
+        <div class="cal" id="cal">
+          <div class="cal__head">
+            <p class="cal__title" id="cal-title" aria-live="polite">Октябрь 2026</p>
+            <div class="cal__nav">
+              <button type="button" id="cal-prev" aria-label="Предыдущий месяц"><svg class="icon" aria-hidden="true"><use href="#i-chev-left"/></svg></button>
+              <button type="button" id="cal-next" aria-label="Следующий месяц"><svg class="icon" aria-hidden="true"><use href="#i-chev-right"/></svg></button>
+            </div>
+          </div>
+          <div class="cal__week" aria-hidden="true"><span>пн</span><span>вт</span><span>ср</span><span>чт</span><span>пт</span><span>сб</span><span>вс</span></div>
+          <div class="cal__grid" id="cal-grid"></div>
+          <p class="cal__cap"><span><span class="cal__swatch" aria-hidden="true"></span>занято (пример)</span><span>Концепт: здесь будет ваш календарь занятости</span></p>
+        </div>
+      </div>
+
+      <aside class="bk-side" aria-label="Ваша заявка">
+        <div class="bk-card">
+          <h3 class="bk-card__title" id="sum-title">Свадьба</h3>
+          <div id="sum-body" aria-live="polite"></div>
+          <form class="contact" id="bk-form" novalidate>
+            <div class="field"><label for="bk-name">Имя</label><input id="bk-name" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться"></div>
+            <div class="field"><label for="bk-phone">Телефон</label><input id="bk-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__"></div>
+            <div class="field"><span class="lbl" id="bk-via-l">Как удобнее связаться</span>
+              <div class="opts" id="bk-via" role="group" aria-labelledby="bk-via-l">
+                <button type="button" class="opt" data-val="звонок" aria-pressed="true">Звонок</button>
+                <button type="button" class="opt" data-val="Telegram" aria-pressed="false">Telegram</button>
+                <button type="button" class="opt" data-val="WhatsApp" aria-pressed="false">WhatsApp</button>
+              </div></div>
+            <label class="check"><input type="checkbox" id="bk-agree"><span>Согласен на&nbsp;обработку персональных данных&nbsp;— <a href="#" data-policy>политика конфиденциальности</a></span></label>
+            <button class="btn btn--primary btn--block bk-submit" type="submit" id="bk-submit" disabled>Отправить заявку</button>
+          </form>
+          <div class="bk-success" id="bk-success" role="status" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Заявка отправлена&nbsp;— мы свяжемся с&nbsp;вами, чтобы подтвердить дату</span></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="bk-mbar" id="bk-mbar">
+      <p class="bk-mbar__sum"><span id="mbar-label">Стоимость</span><b id="mbar-total">—</b></p>
+      <button class="btn btn--primary" type="button" id="mbar-btn" disabled>Отправить заявку</button>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer sec-forest on-dark" id="contacts">
+  <div class="container">
+    <figure class="frame footer__sign reveal">
+      <img class="fade" src="images/sign.jpg" width="2000" height="901" loading="lazy" decoding="async" alt="Деревянная табличка «Sylva River» среди цветущих клумб у въезда, за ней шале">
+    </figure>
+    <div class="grid footer__main">
+      <div class="footer__brand">
+        <svg class="logo-full" viewBox="0 0 657 513" role="img" aria-label="Сылва Ривер"><use href="#logo-full"/></svg>
+        <p class="footer__desc">Эко-парк на&nbsp;высоком берегу реки&nbsp;Сылва</p>
+        <a class="btn btn--line-light footer__reviews" href="https://t.me/sylvariverpark_review" target="_blank" rel="noopener">Отзывы гостей в&nbsp;Telegram<svg class="icon" aria-hidden="true"><use href="#i-upright"/></svg></a>
+      </div>
+      <div class="footer__col">
+        <h2 class="footer__h">Как добраться</h2>
+        <address>Пермский край, хутор Русское Поле, ул.&nbsp;Центральная,&nbsp;53А</address>
+        <p class="footer__muted">В&nbsp;30&nbsp;минутах от&nbsp;Перми</p>
+      </div>
+      <div class="footer__col">
+        <h2 class="footer__h">Связаться</h2>
+        <a class="btn btn--primary footer__phone" href="tel:+79026418002">+7&nbsp;(902)&nbsp;641&#8209;80&#8209;02</a>
+        <p><a class="link footer__vk" href="https://vk.com/sylvariver" target="_blank" rel="noopener"><span class="u">ВКонтакте · vk.com/sylvariver</span></a></p>
+      </div>
+    </div>
+    <div class="grid footer__meta">
+      <p><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span>Заезд с&nbsp;15:00, выезд до&nbsp;12:00</span></p>
+      <p><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg><span>Оплата наличными, по&nbsp;СБП или картой</span></p>
+      <p><svg class="icon" aria-hidden="true"><use href="#i-gift"/></svg><span>Есть подарочные сертификаты</span></p>
+    </div>
+    <div class="footer__bottom"><p>© 2026 Сылва Ривер</p><a href="#top">Наверх ↑</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var doc = document.documentElement; doc.classList.add('js');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var mobileMQ = window.matchMedia('(max-width: 760px)');
+  var NB = ' ';
+  function $(s, r){ return (r || document).querySelector(s); }
+  function $$(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function money(n){ return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, NB) + NB + '₽'; }
+  function plural(n, a, b, c){ var m10 = n % 10, m100 = n % 100; return (m10 === 1 && m100 !== 11) ? a : (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) ? b : c; }
+  var MONTHS = ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
+  var MONTHS_G = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
+  var WD = ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'];
+  function key(d){ return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+  function parse(k){ var p = k.split('-'); return new Date(+p[0], +p[1] - 1, +p[2], 12); }
+  function addDays(d, n){ var x = new Date(d); x.setDate(x.getDate() + n); return x; }
+  function fmtDay(d){ return d.getDate() + NB + MONTHS_G[d.getMonth()]; }
+  function fmtRange(a, b){ return a.getMonth() === b.getMonth() ? a.getDate() + '–' + b.getDate() + NB + MONTHS_G[a.getMonth()] : fmtDay(a) + ' – ' + fmtDay(b); }
+  var today = new Date(); today.setHours(12, 0, 0, 0);
+
+  /* reveal + image fade */
+  var reveals = $$('.reveal');
+  reveals.forEach(function(el){
+    var sib = Array.prototype.filter.call(el.parentElement.children, function(c){ return c.classList.contains('reveal'); });
+    el.style.transitionDelay = (sib.indexOf(el) * 80) + 'ms';
+  });
+  if (reduce || !('IntersectionObserver' in window)) reveals.forEach(function(el){ el.classList.add('is-in'); });
+  else {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); setTimeout(function(){ e.target.style.transitionDelay = ''; }, 1400); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:.06});
+    reveals.forEach(function(el){ io.observe(el); });
+  }
+  $$('img.fade').forEach(function(img){
+    function done(){ img.classList.add('is-loaded'); }
+    if (img.complete && img.naturalWidth) done(); else { img.addEventListener('load', done); img.addEventListener('error', done); }
+  });
+
+  /* mobile: lock hero height so the CTA doesn't jump when browser bars hide/show */
+  var hero = $('.hero'), lockedW = 0;
+  function lockHero(){
+    if (!mobileMQ.matches){ hero.style.height = ''; hero.style.minHeight = ''; lockedW = 0; return; }
+    if (window.innerWidth === lockedW) return;
+    lockedW = window.innerWidth; hero.style.minHeight = '0'; hero.style.height = window.innerHeight + 'px';
+  }
+  lockHero(); window.addEventListener('resize', lockHero);
+
+  /* variant B: rest the headline's bottom on the pier railing (photo coordinates → object-fit:cover crop) */
+  var RAIL_Y = 0.551;
+  var heroImg = $('.hero__img'), stage = $('.hero__stage');
+  function anchorTitle(){
+    if (!doc.classList.contains('v-b') || mobileMQ.matches || !heroImg.naturalWidth) return;
+    var r = heroImg.getBoundingClientRect(), iw = heroImg.naturalWidth, ih = heroImg.naturalHeight;
+    var py = parseFloat((getComputedStyle(heroImg).objectPosition.split(' ')[1]) || '50') / 100;
+    var s = Math.max(r.width / iw, r.height / ih);
+    var y = (r.top - stage.getBoundingClientRect().top) + (r.height - ih * s) * py + RAIL_Y * ih * s;   /* railing, px from stage top */
+    hero.style.setProperty('--ty', (y - 22) + 'px');   /* a clear gap above the railing */
+  }
+  if (heroImg.complete) anchorTitle();
+  heroImg.addEventListener('load', anchorTitle);
+  if ('ResizeObserver' in window) new ResizeObserver(anchorTitle).observe(stage); else window.addEventListener('resize', anchorTitle);
+  window.addEventListener('orientationchange', function(){ lockedW = 0; setTimeout(lockHero, 300); });
+
+  /* ================= BOOKING ================= */
+  var HOUSES = {
+    sokhatka:{name:'Сохатка', rate:function(wd){ return (wd >= 1 && wd <= 4) ? 14000 : 16000; }},
+    sudak:   {name:'Судак',   rate:function(wd){ return (wd >= 1 && wd <= 4) ? 14000 : 17000; }},
+    kiprey:  {name:'Кипрей',  rate:function(wd){ return (wd >= 1 && wd <= 4) ? 17000 : (wd === 0 ? 18000 : 19000); }}
+  };
+  var EXTRA = 1500, BANYA_HOUR = 2250;
+  var BUSY = {'2026-10-03':1, '2026-10-10':1, '2026-10-17':1, '2026-10-24':1};   /* example only */
+  var FORMAT_LABEL = {'свадьба':'Свадьба','день рождения':'День рождения','корпоратив':'Корпоратив','другое':'Праздник'};
+  var st = {
+    tab:'event', lastTab:'event', view:{y:2026, m:9}, via:'звонок',
+    event:{date:null, unsure:false, month:null, format:'свадьба', guests:50},
+    house:{id:'sokhatka', inD:null, outD:null, guests:4},
+    banya:{date:null, start:null, hours:2}
+  };
+  var minView = {y:today.getFullYear(), m:today.getMonth()};
+  var tabs = $$('.bk-tab'), panel = $('#bk-panel'), grid = $('#cal-grid'), cal = $('#cal');
+
+  function setTab(t){
+    st.tab = t; st.lastTab = t;
+    tabs.forEach(function(b){ var on = b.dataset.tab === t; b.setAttribute('aria-selected', on); b.tabIndex = on ? 0 : -1; });
+    panel.setAttribute('aria-labelledby', 'tab-' + t);
+    $$('.bk-opts').forEach(function(p){ p.hidden = p.dataset.for !== t; });
+    render();
+  }
+  tabs.forEach(function(b, i){
+    b.addEventListener('click', function(){ setTab(b.dataset.tab); });
+    b.addEventListener('keydown', function(e){
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0; if (!d) return;
+      var n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); setTab(n.dataset.tab);
+    });
+  });
+  function bindOpts(id, fn){ $(id).addEventListener('click', function(e){ var b = e.target.closest('.opt'); if (b && !b.disabled){ fn(b.dataset.val); render(); } }); }
+  function syncOpts(id, val){ $$('.opt', $(id)).forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.val === String(val)); }); }
+  bindOpts('#ev-format', function(v){ st.event.format = v; });
+  bindOpts('#hs-house', function(v){ st.house.id = v; });
+  bindOpts('#bk-via', function(v){ st.via = v; });
+  bindOpts('#ev-month', function(v){ st.event.month = v; });
+  /* months for "date not decided yet": the next 12 months */
+  var monthWrap = $('#ev-month');
+  for (var mi = 0; mi < 12; mi++){
+    var md = new Date(today.getFullYear(), today.getMonth() + mi, 1);
+    var mb = document.createElement('button'); mb.type = 'button'; mb.className = 'opt'; mb.setAttribute('aria-pressed', 'false');
+    mb.dataset.val = md.getFullYear() + '-' + md.getMonth(); mb.textContent = MONTHS[md.getMonth()] + (md.getFullYear() !== today.getFullYear() ? ' ' + md.getFullYear() : '');
+    monthWrap.appendChild(mb);
+  }
+  $('#ev-unsure').addEventListener('click', function(){ st.event.unsure = !st.event.unsure; if (st.event.unsure) st.event.date = null; else st.event.month = null; render(); });
+  var timeWrap = $('#bn-time');
+  for (var h = 10; h <= 21; h++){
+    var tb = document.createElement('button'); tb.type = 'button'; tb.className = 'opt'; tb.dataset.val = h; tb.setAttribute('aria-pressed', 'false'); tb.textContent = h + ':00'; timeWrap.appendChild(tb);
+  }
+  bindOpts('#bn-time', function(v){ st.banya.start = +v; st.banya.hours = Math.max(2, Math.min(st.banya.hours, 24 - st.banya.start)); });
+  function bindStepper(id, get, set, min, max){
+    $$('button', $(id)).forEach(function(b){ b.addEventListener('click', function(){ set(Math.max(min(), Math.min(max(), get() + (+b.dataset.step)))); render(); }); });
+  }
+  bindStepper('#ev-guests', function(){ return st.event.guests; }, function(v){ st.event.guests = v; }, function(){ return 10; }, function(){ return 70; });
+  bindStepper('#hs-guests', function(){ return st.house.guests; }, function(v){ st.house.guests = v; }, function(){ return 1; }, function(){ return 6; });
+  bindStepper('#bn-dur', function(){ return st.banya.hours; }, function(v){ st.banya.hours = v; }, function(){ return 2; }, function(){ return st.banya.start ? Math.max(2, 24 - st.banya.start) : 12; });
+  function syncStepper(id, val, text, min, max){ var w = $(id), bs = $$('button', w); $('output', w).textContent = text; bs[0].disabled = val <= min; bs[1].disabled = val >= max; }
+
+  $('#cal-prev').addEventListener('click', function(){ var v = st.view; v.m--; if (v.m < 0){ v.m = 11; v.y--; } renderCal(); });
+  $('#cal-next').addEventListener('click', function(){ var v = st.view; v.m++; if (v.m > 11){ v.m = 0; v.y++; } renderCal(); });
+  function isBusy(d){ return !!BUSY[key(d)]; }
+  function rangeFree(a, b){ for (var d = new Date(a); d < b; d = addDays(d, 1)) if (isBusy(d)) return false; return true; }
+  function pick(d){
+    if (st.tab === 'event') st.event.date = key(d);
+    else if (st.tab === 'banya') st.banya.date = key(d);
+    else {
+      var H = st.house, k = key(d);
+      if (!H.inD || H.outD || k <= H.inD){ H.inD = k; H.outD = null; }
+      else if (rangeFree(parse(H.inD), d)) H.outD = k;
+      else { H.inD = k; H.outD = null; }
+    }
+    render();
+    var again = grid.querySelector('[data-k="' + key(d) + '"]'); if (again) again.focus();
+  }
+  function renderCal(){
+    var v = st.view, first = new Date(v.y, v.m, 1, 12);
+    $('#cal-title').textContent = MONTHS[v.m] + ' ' + v.y;
+    $('#cal-prev').disabled = (v.y < minView.y) || (v.y === minView.y && v.m <= minView.m);
+    var lead = (first.getDay() + 6) % 7, days = new Date(v.y, v.m + 1, 0).getDate(), sel = [], range = null;
+    if (st.tab === 'event' && st.event.date) sel = [st.event.date];
+    if (st.tab === 'banya' && st.banya.date) sel = [st.banya.date];
+    if (st.tab === 'house'){ if (st.house.inD) sel.push(st.house.inD); if (st.house.outD){ sel.push(st.house.outD); range = [st.house.inD, st.house.outD]; } }
+    var html = '';
+    for (var i = 0; i < lead; i++) html += '<span aria-hidden="true"></span>';
+    for (var dn = 1; dn <= days; dn++){
+      var d = new Date(v.y, v.m, dn, 12), k = key(d), past = d < today, busy = isBusy(d);
+      var cls = 'day' + (busy ? ' is-busy' : '') + (sel.indexOf(k) > -1 ? ' is-sel' : '') + (range && k > range[0] && k < range[1] ? ' in-range' : '');
+      var label = dn + ' ' + MONTHS_G[v.m] + ' ' + v.y + ', ' + WD[d.getDay()] + (busy ? ', занято (пример)' : '');
+      html += '<button type="button" class="' + cls + '" data-k="' + k + '" aria-label="' + label + '" aria-pressed="' + (sel.indexOf(k) > -1) + '"' + ((past || busy) ? ' disabled' : '') + '>' + dn + '</button>';
+    }
+    grid.innerHTML = html;
+  }
+  grid.addEventListener('click', function(e){ var b = e.target.closest('.day'); if (b && !b.disabled) pick(parse(b.dataset.k)); });
+
+  function row(dt, dd){ return '<div class="sum__row"><dt>' + dt + '</dt><dd>' + dd + '</dd></div>'; }
+  var sumTitle = $('#sum-title'), sumBody = $('#sum-body'), mTotal = $('#mbar-total'), mLabel = $('#mbar-label');
+  function monthLabel(v){ if (!v) return '—'; var p = v.split('-'); return MONTHS[+p[1]] + ' ' + p[0]; }
+  function renderSummary(){
+    var h = '', total = null;
+    if (st.tab === 'event'){
+      var E = st.event;
+      sumTitle.textContent = FORMAT_LABEL[E.format];
+      h += '<dl class="sum">' + row('Дата', E.unsure ? (E.month ? monthLabel(E.month) + ', дата не' + NB + 'выбрана' : 'пока не' + NB + 'выбрана') : (E.date ? fmtDay(parse(E.date)) + ' ' + parse(E.date).getFullYear() : '—')) +
+        row('Гостей', 'около ' + E.guests + (E.guests > 60 ? ' · фуршет' : '')) + '</dl>';
+      h += '<div class="sum__inc"><p>Что входит</p><ul>' +
+        ['Зал и терраса 10:00–23:00', 'Камин и русская печь', 'Гардероб на' + NB + '100 мест', 'Свой алкоголь без пробкового сбора'].map(function(t){ return '<li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>' + t + '</li>'; }).join('') + '</ul></div>';
+      h += '<p class="sum__note">Стоимость зависит от' + NB + 'даты&nbsp;— рассчитаем для вашего события. Задаток 50%, залог 20' + NB + '000' + NB + '₽ возвращается.</p>';
+      mLabel.textContent = 'Стоимость'; mTotal.textContent = 'рассчитаем';
+    } else if (st.tab === 'house'){
+      var H = st.house, house = HOUSES[H.id];
+      sumTitle.textContent = 'Дом «' + house.name + '»';
+      if (H.inD && H.outD){
+        var a = parse(H.inD), b = parse(H.outD), groups = {}, order = [], nights = 0;
+        for (var d = new Date(a); d < b; d = addDays(d, 1)){ var p = house.rate(d.getDay()); if (!groups[p]){ groups[p] = 0; order.push(p); } groups[p]++; nights++; }
+        var extraG = Math.max(0, H.guests - 4), extra = extraG * EXTRA * nights;
+        total = extra; order.forEach(function(p){ total += p * groups[p]; });
+        h += '<dl class="sum">' + row('Даты', fmtRange(a, b)) + row('Ночей', nights) + row('Гостей', H.guests);
+        order.forEach(function(p){ h += row(groups[p] + NB + plural(groups[p], 'ночь', 'ночи', 'ночей') + ' × ' + money(p), money(p * groups[p])); });
+        if (extraG) h += row('Доп. ' + plural(extraG, 'гость', 'гостя', 'гостей') + ': ' + extraG + ' × ' + money(EXTRA) + ' × ' + nights + NB + plural(nights, 'ночь', 'ночи', 'ночей'), money(extra));
+        h += '</dl><div class="sum__total"><span>Итого</span><b>' + money(total) + '</b></div>';
+      } else h += '<p class="sum__empty">' + (H.inD ? 'Выберите дату выезда в' + NB + 'календаре' : 'Выберите даты заезда и' + NB + 'выезда в' + NB + 'календаре') + '</p>';
+      h += '<p class="sum__note">Заезд с' + NB + '15:00, выезд до' + NB + '12:00</p>';
+      mLabel.textContent = 'Итого'; mTotal.textContent = total !== null ? money(total) : '—';
+    } else {
+      var B = st.banya; sumTitle.textContent = 'Баня'; total = BANYA_HOUR * B.hours;
+      h += '<dl class="sum">' + row('Дата', B.date ? fmtDay(parse(B.date)) : '—') +
+        row('Время', B.start ? B.start + ':00–' + String((B.start + B.hours) % 24).padStart(2, '0') + ':00' : '—') +
+        row(B.hours + NB + plural(B.hours, 'час', 'часа', 'часов') + ' × ' + money(BANYA_HOUR), money(total)) + '</dl>';
+      h += '<div class="sum__total"><span>Итого</span><b>' + money(total) + '</b></div><p class="sum__note">Веники' + NB + '— отдельно</p>';
+      mLabel.textContent = 'Итого'; mTotal.textContent = money(total);
+    }
+    sumBody.innerHTML = h;
+  }
+  function render(){
+    syncOpts('#ev-format', st.event.format);
+    syncStepper('#ev-guests', st.event.guests, st.event.guests + NB + plural(st.event.guests, 'гость', 'гостя', 'гостей'), 10, 70);
+    $('#ev-unsure').setAttribute('aria-pressed', st.event.unsure);
+    $('#ev-month').hidden = !st.event.unsure; syncOpts('#ev-month', st.event.month);
+    cal.hidden = st.tab === 'event' && st.event.unsure;
+    syncOpts('#hs-house', st.house.id);
+    syncStepper('#hs-guests', st.house.guests, st.house.guests + NB + plural(st.house.guests, 'гость', 'гостя', 'гостей'), 1, 6);
+    syncOpts('#bn-time', st.banya.start);
+    syncStepper('#bn-dur', st.banya.hours, st.banya.hours + NB + plural(st.banya.hours, 'час', 'часа', 'часов'), 2, st.banya.start ? Math.max(2, 24 - st.banya.start) : 12);
+    syncOpts('#bk-via', st.via);
+    renderCal(); renderSummary(); validate();
+  }
+
+  /* contact: +7 mask, consent, demo submit */
+  var phone = $('#bk-phone'), agree = $('#bk-agree'), submit = $('#bk-submit'), mbtn = $('#mbar-btn'), form = $('#bk-form');
+  function digits(){ var d = phone.value.replace(/\D/g, ''); if (d[0] === '7') d = d.slice(1); if (d.length > 10 && d[0] === '8') d = d.slice(1); return d.slice(0, 10); }
+  function mask(){
+    var d = digits(), out = '+7';
+    if (d.length) out += ' (' + d.slice(0, 3); if (d.length >= 3) out += ')';
+    if (d.length > 3) out += ' ' + d.slice(3, 6); if (d.length > 6) out += '-' + d.slice(6, 8); if (d.length > 8) out += '-' + d.slice(8, 10);
+    phone.value = d.length ? out : '';
+  }
+  phone.addEventListener('input', function(){ mask(); validate(); });
+  phone.addEventListener('focus', function(){ if (!phone.value) phone.value = '+7 '; });
+  phone.addEventListener('blur', function(){ if (!digits().length) phone.value = ''; });
+  agree.addEventListener('change', validate);
+  function validate(){ var ok = digits().length === 10 && agree.checked; submit.disabled = !ok; mbtn.disabled = !ok; }
+  function send(e){ if (e) e.preventDefault(); if (submit.disabled) return; form.hidden = true; $('#bk-success').hidden = false; mbtn.disabled = true; mbtn.textContent = 'Отправлено'; }
+  form.addEventListener('submit', send); mbtn.addEventListener('click', send);
+  $('[data-policy]').addEventListener('click', function(e){ e.preventDefault(); });
+
+  /* every booking CTA → booking section, right tab, prefilled, 600ms highlight */
+  var booking = $('#booking');
+  function flash(els){ els.filter(Boolean).forEach(function(el){ el.classList.add('flash'); setTimeout(function(){ el.classList.remove('flash'); }, 600); }); }
+  function afterScroll(fn){
+    var done = false, t;
+    function go(){ if (done) return; done = true; window.removeEventListener('scrollend', go); clearTimeout(t); fn(); }
+    if ('onscrollend' in window) window.addEventListener('scrollend', go);
+    t = setTimeout(go, reduce ? 30 : 900);
+  }
+  function goBooking(tab, prefill){
+    prefill = prefill || {};
+    if (tab === 'last') tab = st.lastTab || 'event';
+    if (tab === 'house' && prefill.house) st.house.id = prefill.house;
+    setTab(tab);
+    window.scrollTo({top: booking.getBoundingClientRect().top + window.pageYOffset - 24, behavior: reduce ? 'auto' : 'smooth'});
+    afterScroll(function(){
+      var els = [$('#tab-' + tab)];
+      if (tab === 'house' && prefill.house) els.push($('#hs-house .opt[aria-pressed="true"]'));
+      flash(els);
+      if (tab === 'house'){ var first = grid.querySelector('.day:not(:disabled)'); if (first) first.focus({preventScroll:true}); }
+      else $('#tab-' + tab).focus({preventScroll:true});
+    });
+  }
+  $$('[data-book]').forEach(function(b){ b.addEventListener('click', function(e){ e.preventDefault(); goBooking(b.dataset.book, b.dataset.house ? {house:b.dataset.house} : null); }); });
+
+  /* mobile menu */
+  var menu = $('#m-menu'), toggle = $('[data-menu-toggle]');
+  function setMenu(open){ menu.hidden = !open; toggle.setAttribute('aria-expanded', String(open)); }
+  toggle.addEventListener('click', function(){ setMenu(menu.hidden); });
+  menu.addEventListener('click', function(e){ if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !menu.hidden){ setMenu(false); toggle.focus(); } });
+
+  render();
+})();
+</script>
+</body>
+</html>
