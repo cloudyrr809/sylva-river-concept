@@ -219,7 +219,7 @@ button{cursor:pointer}
 .bk-tab[aria-selected="true"]{background:var(--forest);color:var(--on-dark)}
 .bk-grid{align-items:start}
 .bk-main{grid-column:1 / span 7;padding:32px;border-radius:var(--r-card);background:var(--surface)}
-.bk-side{grid-column:8 / span 5;position:sticky;top:24px}
+.bk-side{grid-column:8 / span 5;position:sticky;top:116px}
 .bk-group+.bk-group,.bk-row+.bk-group,.bk-group+.bk-row{margin-top:26px}
 .bk-group__label{display:block;margin-bottom:12px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
 .bk-group__hint{margin-top:8px;font-size:14px;color:var(--muted)}
@@ -337,6 +337,14 @@ button{cursor:pointer}
 }
 
 /* ============ Responsive ============ */
+/* desktop/tablet: the top bar stays with the visitor */
+@media (min-width:761px){
+  html{scroll-padding-top:108px}
+  .topbar{position:fixed;z-index:50;top:0;left:0;right:0;width:auto;margin:0;padding-inline:max(var(--pad), calc((100% - 1360px) / 2));
+    background:var(--bg);transition:box-shadow .35s var(--ease)}
+  .topbar.is-scrolled{box-shadow:0 1px 0 var(--hair), 0 10px 30px -18px rgba(43,58,48,.35)}
+  .m-menu{top:100px}
+}
 @media (max-width:1180px){
   .nav{gap:20px}
   .banya{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
@@ -1061,7 +1069,8 @@ button{cursor:pointer}
     if (tab === 'last') tab = st.lastTab || 'event';
     if (tab === 'house' && prefill.house) st.house.id = prefill.house;
     setTab(tab);
-    window.scrollTo({top: booking.getBoundingClientRect().top + window.pageYOffset - 24, behavior: reduce ? 'auto' : 'smooth'});
+    var off = mobileMQ.matches ? 24 : 92 + 16;   /* clear the fixed top bar on desktop */
+    window.scrollTo({top: booking.getBoundingClientRect().top + window.pageYOffset - off, behavior: reduce ? 'auto' : 'smooth'});
     afterScroll(function(){
       var els = [$('#tab-' + tab)];
       if (tab === 'house' && prefill.house) els.push($('#hs-house .opt[aria-pressed="true"]'));
@@ -1071,6 +1080,11 @@ button{cursor:pointer}
     });
   }
   $$('[data-book]').forEach(function(b){ b.addEventListener('click', function(e){ e.preventDefault(); goBooking(b.dataset.book, b.dataset.house ? {house:b.dataset.house} : null); }); });
+
+  /* fixed top bar: soft shadow once the page has scrolled */
+  var topbar = $('.topbar');
+  function onScroll(){ topbar.classList.toggle('is-scrolled', window.scrollY > 8); }
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
 
   /* mobile menu */
   var menu = $('#m-menu'), toggle = $('[data-menu-toggle]');
