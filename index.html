@@ -371,6 +371,7 @@ button{cursor:pointer}
 
 /* ============ DESKTOP HERO — split screen (45 / 55), editorial collage ============ */
 .hsplit{display:none}
+.river{display:none}
 @media (min-width:761px){
   .hero__media,.hero__title,.hero__band{display:none!important}
   .hero__stage{background:var(--bg)}
@@ -387,8 +388,12 @@ button{cursor:pointer}
   .hsplit__cta{margin-top:clamp(24px, 4.4vh, 40px);min-height:64px;padding:0 36px;font-size:19px}
 
   .hsplit__visual{position:relative;align-self:stretch;min-height:360px}
-  /* the river: a deep-slate ribbon bending through the right column and out of the screen */
-  .hsplit__river{position:absolute;z-index:0;top:4%;bottom:-2%;left:-6%;right:calc(-1 * max(var(--pad), (100vw - 1360px) / 2) - 2px);width:auto;height:auto;overflow:visible;pointer-events:none}
+  /* the river: one slate ribbon from the top-right of the hero, down behind the photos, across behind the chalet photo, out the left edge */
+  .hero,.hero__stage{overflow:visible}
+  .hero__stage{background:transparent!important}
+  .river{display:block;position:absolute;z-index:0;left:0;top:0;width:100%;height:calc(100% + 1000px);pointer-events:none;overflow:visible}
+  .hsplit{position:relative;z-index:1}
+  #events .ev-top__text{position:relative;z-index:1}
   .hsplit__main{position:absolute;z-index:1;left:6%;right:4%;top:50%;transform:translateY(-54%);aspect-ratio:3/2;border-radius:var(--r-photo);
     box-shadow:0 30px 60px -30px rgba(43,58,48,.45)}
   .hsplit__main img{--s:1.45;object-position:44% 80%;transform-origin:42% 86%}
@@ -516,6 +521,10 @@ button{cursor:pointer}
 
 <!-- ================= HERO ================= -->
 <header class="hero" id="top">
+  <svg class="river" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M1030 70 C870 80 790 230 860 330 S 945 470 700 525 S 330 600 250 710 S 70 800 -40 815" fill="none" stroke="#3A4A5A" stroke-width="120" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+  </svg>
+
   <div class="hero__stage">
     <div class="container topbar">
       <nav class="nav" aria-label="Разделы">
@@ -540,9 +549,6 @@ button{cursor:pointer}
         <button class="btn btn--primary hsplit__cta" type="button" data-book="event">Узнать, свободна ли&nbsp;дата</button>
       </div>
       <div class="hsplit__visual" aria-hidden="false">
-        <svg class="hsplit__river" viewBox="0 0 700 700" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M700 40 C 520 70, 470 250, 560 340 S 620 560, 420 620 S 120 640, 40 700" fill="none" stroke="#3A4A5A" stroke-width="120" stroke-linecap="round"/>
-        </svg>
         <figure class="frame hsplit__main"><img src="hero-pier.jpg" width="2560" height="1707" fetchpriority="high" decoding="async"
           alt="Жених и невеста идут к белому пирсу на высоком берегу Сылвы"></figure>
         <figure class="frame hsplit__detail"><img src="river-terrace.jpg" width="1330" height="2000" decoding="async"
