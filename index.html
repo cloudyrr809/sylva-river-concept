@@ -147,8 +147,10 @@ button{cursor:pointer}
 /* Variant B — centred Playfair over the water, bottom line resting on the railing */
 .v-b .hero__title{position:absolute;z-index:3;left:0;right:0;top:var(--ty, 26%);transform:translateY(-100%);text-align:center;padding:0 var(--pad);pointer-events:none}
 /* zoom a little around the right-hand water so the birch on the left clears the centred line */
-.v-b .hero__img{transform:scale(1.3);transform-origin:62% 100%}
-.v-b .hero__title .t1{font:800 clamp(44px, 4.9vw, 76px)/1 var(--display);letter-spacing:-.04em;white-space:nowrap}
+/* keep the whole scene: the photo band is never shorter than ~80% of the photo's natural height at this width */
+.v-b .hero__stage{min-height:min(calc(92px + 100vw / 1.5 * .8), 1000px)}
+.v-b .hero__img{object-position:50% 100%;transform:scale(1.2);transform-origin:70% 100%}
+.v-b .hero__title .t1{font:800 clamp(38px, 4.4vw, 72px)/1 var(--display);letter-spacing:-.04em;white-space:nowrap}
 .v-b .hero__title .t2{margin-top:8px;font:500 clamp(26px, 2.7vw, 42px)/1.05 var(--display);letter-spacing:-.02em}
 
 /* ============ EVENTS ============ */
@@ -870,7 +872,8 @@ button{cursor:pointer}
     var py = parseFloat((getComputedStyle(heroImg).objectPosition.split(' ')[1]) || '50') / 100;
     var s = Math.max(r.width / iw, r.height / ih);
     var y = (r.top - stage.getBoundingClientRect().top) + (r.height - ih * s) * py + RAIL_Y * ih * s;   /* railing, px from stage top */
-    hero.style.setProperty('--ty', (y - 22) + 'px');   /* a clear gap above the railing */
+    var t = $('.hero__title'), minY = 92 + t.offsetHeight + 20;   /* never above the photo's top edge */
+    hero.style.setProperty('--ty', Math.max(y - 22, minY) + 'px');   /* a clear gap above the railing */
   }
   if (heroImg.complete) anchorTitle();
   heroImg.addEventListener('load', anchorTitle);
